@@ -1,0 +1,25 @@
+This is intended to be a quick point of reference for any terminology that appears in the script that may need clarification. Please feel free to suggest additions! This will evolve over time to contain anything and everything useful.
+
+\begingroup
+\setlength{\tabcolsep}{10pt} % Default value: 6pt
+\renewcommand{\arraystretch}{1.5} % Default value: 1
+% \begin{table}[H]
+% \begin{center}
+\begin{longtable}{l p{12cm}}
+%\multicolumn{2}{|c|}{\textbf{General Use:}}\\\hline
+Data & This can be anything: a number, a set of numbers, a character, a set of characters, an image etc. Essentially any outside input you want to handle with \texttt{Python} could be called "data". \\
+Data type & The variety of a particular data, kind of self explanatory but here for completeness. \\
+Data structure & Any container for data. Think of a table or list in the real world, this is where you put \textit{things}. In simple terms a "structure" in which you store "data". \\
+Variable & These are labels that you store things in. Not to be confused with a data structure, a variable essentially labels a value, a data structure or an object and allows the computer to store and use what you have labelled. They are much like variables in maths, $m$ representing a mass, $F$ representing a force, $c$ representing the fundamental speed of light. What the computer actually does is link the label (variable) to a memory address at which your value/object is stored. \\
+Comment & A statement within a piece of code not executed by the computer but instead included to provide context to a human reader of the code. \\
+Function & A reusable segment of code defined by the programmer which contains a set of operations, taking in values and returning the results after execution of the commands within the function. \\
+Argument & A value that is passed into a function to be used inside the function. These can be anything your function needs to operate. Also often called a parameter but rarely in \texttt{Python}. \\
+Module & Simply, a module is a file consisting of \texttt{Python} code which can be loaded in your \texttt{Python} programs to add functionality not native to \texttt{Python}. \\
+PEP-8 & This is a set of guidelines for writing good ``Pythonic'' code which makes it easier to read other peoples code. \\
+IDE & (Integrated Development Environments) A piece of software that provides everything a user needs to write code; think Word but for code development. \\
+Keyword & Keywords are the reserved words in \texttt{Python} used to perform specific operations. We cannot use a keyword as a variable name, function name or any other identifier as this would overwrite the python native behaviour of the word. \\
+\caption {Some useful terminology for the module.} . \\
+\end{longtable}
+% \end{center}
+% \end{table}
+\endgroup

@@ -1,0 +1,135 @@
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
+\BOOKMARK [0][-]{chapter.2}{Some Useful Terminology}{}% 2
+\BOOKMARK [0][-]{chapter.3}{Jupyter: Quick reference}{}% 3
+\BOOKMARK [0][-]{chapter.4}{The Basics}{}% 4
+\BOOKMARK [1][-]{section.4.1}{Learning Outcomes}{chapter.4}% 5
+\BOOKMARK [1][-]{section.4.2}{Preamble}{chapter.4}% 6
+\BOOKMARK [1][-]{section.4.3}{Running Python on the University computers}{chapter.4}% 7
+\BOOKMARK [2][-]{subsection.4.3.1}{Running Anaconda for the first time}{section.4.3}% 8
+\BOOKMARK [2][-]{subsection.4.3.2}{Running Anaconda in subsequent sessions}{section.4.3}% 9
+\BOOKMARK [2][-]{subsection.4.3.3}{Running Jupyter Notebook}{section.4.3}% 10
+\BOOKMARK [1][-]{section.4.4}{Running Python on your own computer}{chapter.4}% 11
+\BOOKMARK [1][-]{section.4.5}{``Hello World''}{chapter.4}% 12
+\BOOKMARK [2][-]{subsection.4.5.1}{Saving and logging your work}{section.4.5}% 13
+\BOOKMARK [2][-]{subsection.4.5.2}{Infinite loops happen... and are very bad}{section.4.5}% 14
+\BOOKMARK [1][-]{section.4.6}{Data types in Python}{chapter.4}% 15
+\BOOKMARK [1][-]{section.4.7}{Simple calculations with Python}{chapter.4}% 16
+\BOOKMARK [1][-]{section.4.8}{Using variables for simple maths operations}{chapter.4}% 17
+\BOOKMARK [2][-]{subsection.4.8.1}{Test your understanding}{section.4.8}% 18
+\BOOKMARK [1][-]{section.4.9}{Changing A Variable's Data Type}{chapter.4}% 19
+\BOOKMARK [1][-]{section.4.10}{Commenting}{chapter.4}% 20
+\BOOKMARK [1][-]{section.4.11}{Testing the type of a variable}{chapter.4}% 21
+\BOOKMARK [1][-]{section.4.12}{A note on the horrors of the insert key}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.13}{Integrated Development Environments}{chapter.4}% 23
+\BOOKMARK [0][-]{chapter.5}{Strings, Booleans, Tuples and Lists}{}% 24
+\BOOKMARK [1][-]{section.5.1}{Learning Outcomes}{chapter.5}% 25
+\BOOKMARK [1][-]{section.5.2}{Preamble}{chapter.5}% 26
+\BOOKMARK [2][-]{subsection.5.2.1}{A reminder about collusion and plagiarism}{section.5.2}% 27
+\BOOKMARK [2][-]{subsection.5.2.2}{Sourcing Help}{section.5.2}% 28
+\BOOKMARK [1][-]{section.5.3}{String manipulations}{chapter.5}% 29
+\BOOKMARK [2][-]{subsection.5.3.1}{Exercises}{section.5.3}% 30
+\BOOKMARK [1][-]{section.5.4}{Boolean Variables}{chapter.5}% 31
+\BOOKMARK [2][-]{subsection.5.4.1}{Exercises}{section.5.4}% 32
+\BOOKMARK [1][-]{section.5.5}{Tuples \046 Lists}{chapter.5}% 33
+\BOOKMARK [2][-]{subsection.5.5.1}{Tuples}{section.5.5}% 34
+\BOOKMARK [2][-]{subsection.5.5.2}{Lists}{section.5.5}% 35
+\BOOKMARK [2][-]{subsection.5.5.3}{The is Keyword}{section.5.5}% 36
+\BOOKMARK [2][-]{subsection.5.5.4}{Exercises}{section.5.5}% 37
+\BOOKMARK [1][-]{section.5.6}{Input function}{chapter.5}% 38
+\BOOKMARK [2][-]{subsection.5.6.1}{Issues with jupyter}{section.5.6}% 39
+\BOOKMARK [2][-]{subsection.5.6.2}{Exercises}{section.5.6}% 40
+\BOOKMARK [1][-]{section.5.7}{Signpost}{chapter.5}% 41
+\BOOKMARK [1][-]{section.5.8}{Advanced Exercises - Some independent learning may be required}{chapter.5}% 42
+\BOOKMARK [1][-]{section.5.9}{Worked Solutions for Section 5.3.1}{chapter.5}% 43
+\BOOKMARK [0][-]{chapter.6}{Conditionals, Loops and Functions}{}% 44
+\BOOKMARK [1][-]{section.6.1}{Learning Outcomes}{chapter.6}% 45
+\BOOKMARK [1][-]{section.6.2}{Colons and Indentation}{chapter.6}% 46
+\BOOKMARK [1][-]{section.6.3}{The if statement}{chapter.6}% 47
+\BOOKMARK [2][-]{subsection.6.3.1}{Exercises}{section.6.3}% 48
+\BOOKMARK [1][-]{section.6.4}{While Loops}{chapter.6}% 49
+\BOOKMARK [2][-]{subsection.6.4.1}{Exercises}{section.6.4}% 50
+\BOOKMARK [1][-]{section.6.5}{For Loops}{chapter.6}% 51
+\BOOKMARK [1][-]{section.6.6}{Format strings}{chapter.6}% 52
+\BOOKMARK [1][-]{section.6.7}{Range command}{chapter.6}% 53
+\BOOKMARK [2][-]{subsection.6.7.1}{Using the separator command}{section.6.7}% 54
+\BOOKMARK [2][-]{subsection.6.7.2}{Exercises}{section.6.7}% 55
+\BOOKMARK [1][-]{section.6.8}{Functions}{chapter.6}% 56
+\BOOKMARK [2][-]{subsection.6.8.1}{Exercises}{section.6.8}% 57
+\BOOKMARK [1][-]{section.6.9}{Signpost}{chapter.6}% 58
+\BOOKMARK [1][-]{section.6.10}{Lambda statement}{chapter.6}% 59
+\BOOKMARK [1][-]{section.6.11}{Dictionaries}{chapter.6}% 60
+\BOOKMARK [2][-]{subsection.6.11.1}{A Note On Iterators}{section.6.11}% 61
+\BOOKMARK [1][-]{section.6.12}{Advanced Exercises}{chapter.6}% 62
+\BOOKMARK [1][-]{section.6.13}{Worked Examples}{chapter.6}% 63
+\BOOKMARK [0][-]{chapter.7}{Python Modules and an Introduction to Plotting}{}% 64
+\BOOKMARK [1][-]{section.7.1}{Learning Outcomes}{chapter.7}% 65
+\BOOKMARK [1][-]{section.7.2}{What are modules?}{chapter.7}% 66
+\BOOKMARK [1][-]{section.7.3}{Common Python modules}{chapter.7}% 67
+\BOOKMARK [1][-]{section.7.4}{Importing Modules}{chapter.7}% 68
+\BOOKMARK [2][-]{subsection.7.4.1}{Method One}{section.7.4}% 69
+\BOOKMARK [2][-]{subsection.7.4.2}{Method Two}{section.7.4}% 70
+\BOOKMARK [2][-]{subsection.7.4.3}{Method Three}{section.7.4}% 71
+\BOOKMARK [2][-]{subsection.7.4.4}{Method Four}{section.7.4}% 72
+\BOOKMARK [1][-]{section.7.5}{Accessing help with modules and functions}{chapter.7}% 73
+\BOOKMARK [2][-]{subsection.7.5.1}{The dir command}{section.7.5}% 74
+\BOOKMARK [2][-]{subsection.7.5.2}{The help command}{section.7.5}% 75
+\BOOKMARK [2][-]{subsection.7.5.3}{Exercises}{section.7.5}% 76
+\BOOKMARK [1][-]{section.7.6}{The random module}{chapter.7}% 77
+\BOOKMARK [2][-]{subsection.7.6.1}{Exercises}{section.7.6}% 78
+\BOOKMARK [2][-]{subsection.7.6.2}{Seeding}{section.7.6}% 79
+\BOOKMARK [1][-]{section.7.7}{The arange command}{chapter.7}% 80
+\BOOKMARK [1][-]{section.7.8}{The matplotlib.pyplot.plot function}{chapter.7}% 81
+\BOOKMARK [2][-]{subsection.7.8.1}{Exercises}{section.7.8}% 82
+\BOOKMARK [1][-]{section.7.9}{Plotting in multiple figures}{chapter.7}% 83
+\BOOKMARK [1][-]{section.7.10}{Plotting a Scatter with plt.scatter}{chapter.7}% 84
+\BOOKMARK [2][-]{subsection.7.10.1}{Exercises}{section.7.10}% 85
+\BOOKMARK [1][-]{section.7.11}{Signpost}{chapter.7}% 86
+\BOOKMARK [1][-]{section.7.12}{Advanced Exercises}{chapter.7}% 87
+\BOOKMARK [1][-]{section.7.13}{Worked Examples}{chapter.7}% 88
+\BOOKMARK [0][-]{chapter.8}{Introduction to Data and Pandas}{}% 89
+\BOOKMARK [1][-]{section.8.1}{Learning Outcomes}{chapter.8}% 90
+\BOOKMARK [1][-]{section.8.2}{Loading CSV files}{chapter.8}% 91
+\BOOKMARK [2][-]{subsection.8.2.1}{Specifying Directories}{section.8.2}% 92
+\BOOKMARK [2][-]{subsection.8.2.2}{The csv Module}{section.8.2}% 93
+\BOOKMARK [2][-]{subsection.8.2.3}{The pandas Module}{section.8.2}% 94
+\BOOKMARK [2][-]{subsection.8.2.4}{Exercises}{section.8.2}% 95
+\BOOKMARK [1][-]{section.8.3}{Plotting data points and error bars}{chapter.8}% 96
+\BOOKMARK [2][-]{subsection.8.3.1}{Data points}{section.8.3}% 97
+\BOOKMARK [2][-]{subsection.8.3.2}{Plotting error bars}{section.8.3}% 98
+\BOOKMARK [1][-]{section.8.4}{Fitting straight lines to data points}{chapter.8}% 99
+\BOOKMARK [2][-]{subsection.8.4.1}{Exercises}{section.8.4}% 100
+\BOOKMARK [1][-]{section.8.5}{Answers to Exercises from Sec 8.3.2}{chapter.8}% 101
+\BOOKMARK [0][-]{chapter.9}{Numpy and Arrays}{}% 102
+\BOOKMARK [1][-]{section.9.1}{Learning Outcomes}{chapter.9}% 103
+\BOOKMARK [1][-]{section.9.2}{What is numpy?}{chapter.9}% 104
+\BOOKMARK [1][-]{section.9.3}{Array creation}{chapter.9}% 105
+\BOOKMARK [1][-]{section.9.4}{Computations with Arrays}{chapter.9}% 106
+\BOOKMARK [2][-]{subsection.9.4.1}{Exercises \(with worked solutions\)}{section.9.4}% 107
+\BOOKMARK [2][-]{subsection.9.4.2}{Broadcasting}{section.9.4}% 108
+\BOOKMARK [2][-]{subsection.9.4.3}{Extraction and Shape/Dimension Manipulations}{section.9.4}% 109
+\BOOKMARK [1][-]{section.9.5}{Using numpy's Random Functions}{chapter.9}% 110
+\BOOKMARK [2][-]{subsection.9.5.1}{Exercises}{section.9.5}% 111
+\BOOKMARK [1][-]{section.9.6}{Treating Arrays as Matrices}{chapter.9}% 112
+\BOOKMARK [1][-]{section.9.7}{The Where Function}{chapter.9}% 113
+\BOOKMARK [2][-]{subsection.9.7.1}{Exercises \(with worked solutions\)}{section.9.7}% 114
+\BOOKMARK [2][-]{subsection.9.7.2}{Advanced Exercises}{section.9.7}% 115
+\BOOKMARK [1][-]{section.9.8}{Optimisation with numpy}{chapter.9}% 116
+\BOOKMARK [1][-]{section.9.9}{Worked Solutions}{chapter.9}% 117
+\BOOKMARK [0][-]{chapter.10}{Scientific Python}{}% 118
+\BOOKMARK [1][-]{section.10.1}{Learning Outcomes}{chapter.10}% 119
+\BOOKMARK [1][-]{section.10.2}{Opening Different File Types}{chapter.10}% 120
+\BOOKMARK [2][-]{subsection.10.2.1}{with and the importance of closing files}{section.10.2}% 121
+\BOOKMARK [2][-]{subsection.10.2.2}{Text and binary files}{section.10.2}% 122
+\BOOKMARK [2][-]{subsection.10.2.3}{Pickle files}{section.10.2}% 123
+\BOOKMARK [2][-]{subsection.10.2.4}{Numpy files}{section.10.2}% 124
+\BOOKMARK [2][-]{subsection.10.2.5}{FITS files}{section.10.2}% 125
+\BOOKMARK [2][-]{subsection.10.2.6}{HDF5 files}{section.10.2}% 126
+\BOOKMARK [1][-]{section.10.3}{Treating Images As Arrays}{chapter.10}% 127
+\BOOKMARK [2][-]{subsection.10.3.1}{Producing images}{section.10.3}% 128
+\BOOKMARK [2][-]{subsection.10.3.2}{Manipulating images}{section.10.3}% 129
+\BOOKMARK [2][-]{subsection.10.3.3}{Exercises \(with worked solutions\)}{section.10.3}% 130
+\BOOKMARK [1][-]{section.10.4}{Histograms}{chapter.10}% 131
+\BOOKMARK [1][-]{section.10.5}{Basic Curve Fitting}{chapter.10}% 132
+\BOOKMARK [1][-]{section.10.6}{Integration}{chapter.10}% 133
+\BOOKMARK [2][-]{subsection.10.6.1}{Exercises \(with worked solutions\)}{section.10.6}% 134
+\BOOKMARK [1][-]{section.10.7}{Worked Solutions}{chapter.10}% 135

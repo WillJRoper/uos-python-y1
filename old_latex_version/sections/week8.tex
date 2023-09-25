@@ -1,0 +1,624 @@
+\section{Learning Outcomes}
+
+\noindent By the end of today's session you will know how to:
+\begin{enumerate} 
+\item Create and manipulate \texttt{numpy} arrays.
+\item Perform basic calculations and operations using arrays.
+\item Generate arrays containing random values.
+\item Perform matrix operations with \texttt{numpy}.
+%\item Use arrays as images, manipulating and plotting them.
+\item Use the \texttt{where} function.
+\item Utilise \texttt{numpy} to optimise programs (advanced).
+\end{enumerate}
+
+\section{What is \texttt{numpy}?}
+
+You have seen some of \texttt{numpy} in the previous chapters but this has barely scratched the surface of what \texttt{numpy} really is. It is in fact one of the most powerful and frequently used modules available in \texttt{Python}. It contains basic mathematical functions, a whole host of common linear algebra operations, a data structure that makes many complex operations simple, and random number capabilities to name a few. Some of its abilities replicate functionality that already exists in the base \texttt{Python} language, but normally the \texttt{numpy} implementation will be much faster. \\
+
+This chapter will not be comprehensive, \texttt{numpy} is such a large module that teaching you how to use it all would take a course by itself, but it will cover the most useful and important features. Full documentation can be found at \url{https://docs.scipy.org/doc/numpy/}.\\
+
+The main building block of \texttt{numpy} is the array (ndarray to be specific), which acts somewhat like multi-dimensional lists. In fact you may have seen similar structures before: a list of lists is inherently a 2-D object with rows (the index on the inner list) and columns (the index on the outer list), however lists of lists like these have serious limitations - such as not being able to extract individual columns. Arrays however not only allow you to extract rows and columns but contain a large number of useful features. Below is a demonstration of some basic operations. \\
+
+One way to define an array is to take an existing list and convert it using \texttt{np.array()}.
+\begin{lstlisting}[style=PY]
+In [1]: # Define a list
+        list1 = [0, 1, 2, 3, 4]
+        
+        # Convert this list to a 1-D numpy array
+        arr1d = np.array(list1)
+\end{lstlisting}
+We can then perform a number of basic statistical operations.
+\begin{lstlisting}[style=PY]
+In [2]: # Compute the mean
+        np.mean(arr1d)
+        
+        # Compute the median
+        np.median(arr1d)
+        
+        # Compute the sum
+        np.sum(arr1d)
+        
+        # Compute the standard deviation
+        np.std(arr1d)
+        
+        # Compute the variance (square of standard deviation)
+        np.var(arr1d)
+\end{lstlisting}
+The argument of these functions does not have to be an array however, in all the statements above \texttt{arr1d} could be exchanged with \texttt{list1} and you would get the same outputs. However, by using arrays, most of these can be utilised with a different syntax:
+\begin{lstlisting}[style=PY]
+In [3]: # Compute the mean
+        arr1d.mean()
+        
+        # Compute the median
+        np.median(arr1d)
+        
+        # Compute the sum
+        arr1d.sum()
+        
+        # Compute the standard deviation
+        arr1d.std()
+        
+        # Compute the variance (square of standard deviation)
+        arr1d.var()
+\end{lstlisting}
+Both of the above blocks will produce the following output if you print each operation.
+\begin{lstlisting}[style=PY, backgroundcolor=\color{white}]
+Out[3]: 2.0
+        2.0
+        10
+        1.4142135623730951
+        2.0
+\end{lstlisting}
+Notice most of these results have been converted from the input integers to floats with the exception of the sum which has maintained the integer dtype. This will happen unless a data type argument (dtype) is stated within the \texttt{np.array()} call or sum, mean or std etc.\\
+
+We can also extract meta data from the array such as it's size (similar to \texttt{len}).
+\begin{lstlisting}[style=PY]
+In [4]: # Get the size of the array
+        arr1d.size
+\end{lstlisting}
+\begin{lstlisting}[style=PY, backgroundcolor=\color{white}]
+Out[4]: 5
+\end{lstlisting}
+Notice the lack of parentheses on the size call. This is important since size is not `callable', i.e. it is not a function but instead a property of the array. This will make more sense if you continue on to using object orientated \texttt{python} after this module.
+
+\section{Array creation}
+
+There are a number of ways to create an array in \texttt{numpy}, the exact use normally dictating which is the preferred method. We have already covered converting a list to an array but there are 3 useful ways to create an array, particularly if you need an array of a certain size to populate in a loop or if you need certain elements to be initialised.
+
+The first of these is \texttt{np.empty}, which initialises an `empty' array. `Empty' here meaning an array where the contents are not initialised at any predictable value. 
+
+\begin{lstlisting}[style=PY]
+In [1]: # Create an empty array
+        empty_arr = np.empty((4, 4))
+\end{lstlisting}
+This creates a 4x4 array of `empty' values. Another and more often used version produces an array of zeros.
+\begin{lstlisting}[style=PY]
+In [2]: # Create an array of zeros
+        zero_arr = np.zeros((4, 4))
+\end{lstlisting}
+Again, this creates a 4x4 array but this time filled with 0. Finally, you can create an array filled with a particular value.
+\begin{lstlisting}[style=PY]
+In [3]: # Create an array of the value of pi
+        full_arr = np.full((4, 4), np.pi)
+\end{lstlisting}
+This will create a 4x4 array filled with the value of pi. In each of these cases the argument you pass the function is the shape of the array, if more than 1D this must be a tuple as shown here. In the \texttt{full} case you must also supply the second argument which is the value you wish the array to be filled with. Notice also this array has be filled with np.pi, this is the value of $\pi$ which \texttt{numpy} has stored as an attribute. Don't worry too much about the semantics of this statement, just remember pi can be accessed from numpy with \texttt{np.pi} without brackets (again an attribute/property, not a callable).
+
+\newpage
+
+In addition to the methods shown above each of these 3 array creation methods has a \texttt{\_like} version which will create an array using the shape of another like so.
+
+\begin{lstlisting}[style=PY]
+In [4]: # Define a list
+        list1 = [[0, 1], [2, 3], [4, 5]]
+        
+        # Convert this list to a 2-D numpy array
+        arr2d = np.array(list1)
+        print(arr2d.shape)
+        
+        # Create an empty array
+        empty_arr = np.empty_like(arr2d)
+        
+        # Create an array of zeros
+        zero_arr = np.zeros_like(arr2d)
+        
+        # Create an array of the value of pi
+        full_arr = np.full_like(arr2d, np.pi)
+        print(empty_arr.shape, zero_arr.shape, full_arr.shape)
+\end{lstlisting}
+\begin{lstlisting}[style=PY, backgroundcolor=\color{white}]
+Out[4]: (3, 2)
+        (3, 2) (3, 2) (3, 2)
+\end{lstlisting}
+
+These methods are summarised in Tab.\ref{tab:arrc}.
+
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{|X|X|X|}
+    \hline
+     Function & Arguments & Description \\
+     \hline
+     \texttt{np.array} & list, dtype (optional) & Converts a list (or list of lists) to an array with optional ability to specify data type for elements. \\ 
+     \hline
+     \texttt{np.empty} & shape & Creates an empty array filled with uninitialised values.\\
+     \hline
+     \texttt{np.empty\_like} & array & Same as \texttt{np.empty} but uses the shape of another array. \\
+     \hline
+     \texttt{np.zeros} & shape & Creates an array of zeros of the given size.\\
+     \hline
+     \texttt{np.zeros\_like} & array & Same as \texttt{np.zeros} but uses the shape of another array. \\
+     \hline
+     \texttt{np.full} & shape, fill\_value & Creates an array filled with a specified value.\\
+     \hline
+     \texttt{np.full\_like} & array, fill\_value & Same as \texttt{np.full} but uses the shape of another array. \\
+     \hline
+\end{tabularx}
+\caption{A table showing a selection of ways an array can be created using \texttt{numpy}. Note this is note exhaustive, nor are the arguments a complete list of the possible arguments, for a complete list of arguments see \texttt{https://docs.scipy.org/doc/numpy/}.}
+\label{tab:arrc}
+\end{table}
+
+\section{Computations with Arrays}
+
+Once we have created arrays we can do a number of computations and manipulations with them. You have seen some of these in Chapter~\ref{chap:modules}. Here we cover mathematical operators to display array behaviour but \texttt{numpy} also contains a huge bank of mathematical functions (such as $\sin$, $\log$, $\exp$ etc., note that in \texttt{numpy} \texttt{log} is the natural log and \texttt{log10} is log in base 10). To find your desired function either use \texttt{dir} or look in the documentation.\\
+
+Any mathematical operators can be used on the array as a whole (operating on each individual element in a hidden loop in C), which is much faster than if this were done using a \texttt{python} loop. We can show this with a simple example
+
+\begin{lstlisting}[style=PY]
+In [1]: # Define a list
+        list1 = [[0, 1], [2, 3], [4, 5]]
+        
+        # Convert this list to a 2-D numpy array
+        arr2d = np.array(list1, dtype=float)
+        
+        # Multiply the elements by 4
+        arr2d *= 4
+        print(arr2d)
+        
+        # Add 4
+        arr2d += 4
+        print(arr2d)
+        
+        # Subtract 12
+        arr2d -= 12
+        print(arr2d)
+        
+        # Divide by 2
+        arr2d /= 2
+        print(arr2d)
+\end{lstlisting}
+\begin{lstlisting}[style=PY, backgroundcolor=\color{white}]
+Out[1]: [[ 0.  4.]
+         [ 8. 12.]
+         [16. 20.]]
+        [[ 4.  8.]
+         [12. 16.]
+         [20. 24.]]
+        [[-8. -4.]
+         [ 0.  4.]
+         [ 8. 12.]]
+        [[-4. -2.]
+         [ 0.  2.]
+         [ 4.  6.]]
+\end{lstlisting}
+
+\newpage
+
+We can also multiply arrays as long as they `have the same dimension', i.e. in the simple case they are the same shape. This multiplies together the entries sharing the same position in each array.
+\begin{lstlisting}[style=PY]
+In [2]: # Define a list
+        list2 = [[5, 4], [3, 2], [1, 0]]
+        
+        # Convert this list to a 2-D numpy array
+        arr2d2 = np.array(list2)
+        
+        # Multipply the array by another array
+        arr2d *= arr2d2
+        print(arr2d)
+\end{lstlisting}
+\begin{lstlisting}[style=PY, backgroundcolor=\color{white}]
+        [[-20.  -8.]
+         [  0.   4.]
+         [  4.   0.]]
+\end{lstlisting}
+You can test the other operations for your self but all of the above operations will work. 
+
+The important thing to note is that this works if the array is the same shape OR must has the same shape as the final dimension. In other words, an array containing $N$ 2-element vectors can be multiplied by either a $N \times 2$ array or a 2-element vector. This is shown below.
+\begin{lstlisting}[style=PY]
+In [3]: # Create a 2 element vector
+        vec2 = np.array([5, 5])
+        
+        # Multiply the array by a 2 vector
+        arr2d *= vec2
+        print(arr2d)
+\end{lstlisting}
+\begin{lstlisting}[style=PY, backgroundcolor=\color{white}]
+        [[-100.  -40.]
+         [   0.   20.]
+         [  20.    0.]]
+\end{lstlisting}
+Again you can check this works with all other operations.
+\newpage
+We can also find the maximum and minimum of an array as well finding the index of the maximum or minimum.
+\begin{lstlisting}[style=PY]
+In [4]: # Define an array
+        arr = np.array([1, 2, 3, 4, 5])
+        
+        # Get the maximum and it's location
+        arr.max()  # value
+        arr.argmax()  # index
+        
+        # Get the minimum and it's location
+        arr.min()  # value
+        arr.argmin()  # index
+\end{lstlisting}
+\begin{lstlisting}[style=PY, backgroundcolor=\color{white}]
+        5
+        4
+        1
+        0
+\end{lstlisting}
+
+\subsection{Exercises (with worked solutions)} \label{sec:exc_array}
+\begin{enumerate}
+\item Create an array of zeros. Loop over it storing the square of the index as each element.
+\item Create an array full of $-2$. Multiply all elements by $-2$.
+\item Find the sum, mean, standard deviation, and median of the array from the first exercise.
+\end{enumerate}
+
+\subsection{Broadcasting}
+
+How arrays behave when operated on with another array is dictated by \texttt{numpy}'s ``broadcasting rules'' (for instance multiplying two together). Rather than give a long explanation of this here we instead want to draw your attention to the \texttt{numpy} documentation. This is a fantastic resource and has a very good page explaining the ``broadcasting rules'', this can be found at: \url{https://docs.scipy.org/doc/numpy/user/basics.broadcasting.html}. 
+
+Keep in mind that this documentation exists, there is a full description, and often examples, of all functions within \texttt{numpy} and also \texttt{scipy} which you will see more of next week. We have mentioned this a fair amount already but the internet is a valuable resource with both documentation and forum posts available for most widely used packages.
+\newpage
+\subsection{Extraction and Shape/Dimension Manipulations}
+
+Just like lists, elements can be extracted from arrays by indexing with the position of the desired element. 
+\begin{lstlisting}[style=PY]
+In [1]: # Define a 1D array
+        arr = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+        
+        print(arr[4])
+\end{lstlisting}
+\begin{lstlisting}[style=PY, backgroundcolor=\color{white}]
+        5
+\end{lstlisting}
+
+Of course unlike lists an array can have multiple dimensions in which case indexing for a single element needs have an index for each dimension.
+
+\begin{lstlisting}[style=PY]
+In [2]:# Define a 2D array
+        arr2D = np.array([[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]])
+        
+        print(arr2D[1, 4])
+\end{lstlisting}
+\begin{lstlisting}[style=PY, backgroundcolor=\color{white}]
+        10
+\end{lstlisting}
+
+Again like lists, slices can be extracted from an array.
+
+\begin{lstlisting}[style=PY]
+In [3]: print(arr2D[1, 1:4])
+\end{lstlisting}
+\begin{lstlisting}[style=PY, backgroundcolor=\color{white}]
+Out[14]: [7 8 9]
+\end{lstlisting}
+
+Having multidimensional arrays means you can index in all sorts of ways. Slicing along certain axes/dimensions or extracting particular rows, columns or any combination of these. The following example shows extracting the first 10 rows of an array and then extracting the last 10 rows but only the first column of those rows. 
+
+\begin{lstlisting}[style=PY]
+In [4]: # Define a 2D array
+        arr2d = np.array([[1, 2], [3, 4], [5, 6], [7, 8], [9, 10], [11, 12], 
+                          [13, 14], [15, 16], [17, 18], [19, 20], [21, 22], 
+                          [23, 24]])
+        
+        print(arr2d[:10])
+        print(arr2d[-10:, 0])
+\end{lstlisting}
+\begin{lstlisting}[style=PY, backgroundcolor=\color{white}]
+        [[ 1  2]
+         [ 3  4]
+         [ 5  6]
+         [ 7  8]
+         [ 9 10]
+         [11 12]
+         [13 14]
+         [15 16]
+         [17 18]
+         [19 20]]
+        [ 5  7  9 11 13 15 17 19 21 23]
+\end{lstlisting}
+
+You can generalise this to a greater number of dimensions than 2 as you please. 
+
+One huge advantage of arrays over lists is that they can accept a list or an array of indices to extract specific elements! The \texttt{numpy} module is so proud of these indexing properties they call the process ``fancy indexing''. This not only refers to the ability to provide lists of indices, which is a necessity with multidimensional arrays, but also to the fact that the result of a fancy index (array indexing) is the same shape as the index not the array being indexed, a not immediately obvious subtlety. 
+
+\begin{lstlisting}[style=PY]
+In [5]: print(arr2d[[0, 4, 9, 10]])
+        print(arr2d[(0, 1, 4, 6), (0, 1, 0, 1)])
+\end{lstlisting}
+\begin{lstlisting}[style=PY, backgroundcolor=\color{white}]
+        [[ 1  2]
+         [ 9 10]
+         [19 20]
+         [21 22]]
+        [ 1  4  9 14]
+\end{lstlisting}
+
+Of course this isn't the end of the story... arrays are wonderful things with a seemingly endless number of useful features and surprising behaviours. One of these is ``Boolean indexing''. This allows you to index based on a conditional; elements for which the condition is True are returned and elements for which the condition is False are not.
+
+\begin{lstlisting}[style=PY]
+In [6]: small_1d = arr2d[0:5,1]
+        print(small_1d)
+        print(small_1d[[True, False, True, True, False]])
+        print(small_1d[small_1d > 5])
+\end{lstlisting}
+\begin{lstlisting}[style=PY, backgroundcolor=\color{white}]
+         [ 2  4  6  8 10]
+         [2 6 8]
+         [ 6  8 10]
+\end{lstlisting}
+
+As well as extracting elements we can also manipulate arrays in a number of ways. There are \texttt{numpy} methods which will flip arrays, these can be useful when array shapes get complex but there's a really simple way to reverse the order along a axis of an array using indexing:
+
+\begin{lstlisting}[style=PY]
+In [7]: print(small_1d[6:1:-1])
+        print(small_1d[::-1])
+\end{lstlisting}
+\begin{lstlisting}[style=PY, backgroundcolor=\color{white}]
+         [10  8  6]
+         [10  8  6  4  2]
+\end{lstlisting}
+
+To fully reverse the order of a multidimensional array you can simply do this along each dimension.
+
+\newpage
+You can also reshape an array. Now lets say you have an array of shape (10, 10) but you want is to be of shape (5, 20) this can be done by using .reshape(shape), where shape is a tuple containing the desired shape. 
+
+\begin{lstlisting}[style=PY]
+In [8]: arr3 = np.full((10,10),2)
+        print(arr3.shape)
+        arr3 = arr3.reshape(5,20)
+        print(arr3.shape)
+\end{lstlisting}
+\begin{lstlisting}[style=PY, backgroundcolor=\color{white}]
+         (10, 10)
+         (5, 20)
+\end{lstlisting}
+
+It's important to note how this is performed by \texttt{numpy}. What reshape does effectively is run through the elements of an array filling the new shaped array with elements 1 by 1 going along rows. If using reshape be sure elements are ending up in the desired position.
+
+\section{Using \texttt{numpy}'s Random Functions}
+\label{sec:numpyrandom}
+
+In Chapter \ref{chap:modules} we showed you the \texttt{random} module. There is absolutely nothing wrong with the \texttt{random} module but for certain applications the implementation of very similar functions in \texttt{numpy.random} (briefly introduced in Section~\ref{datapoints}) is much better suited to the job (one upside of the \texttt{random} module is that it is ``thread safe'', but this will only matter to you if you find your self doing any parallel computing later on).
+
+The main difference between \texttt{random} and \texttt{numpy.random} is that \texttt{numpy.random} has the ability to produce multiple random numbers at once in an array.
+
+In much the same vein as when we presented the \texttt{random} module, do the following exercises using both \texttt{dir} and \texttt{help}, and the \texttt{numpy} docs: \url{https://numpy.org/doc/stable/reference/random/index.html}. Learning how to work from documentation is essential not only if you become a programmer later on in your career but also to complete many of the assignments you will be set in later years.
+
+\subsection{Exercises}
+
+\subsubsection{Exercises (with worked solutions)} \label{sec:exc_random}
+\begin{enumerate}
+\item Generate 100 random numbers between 0 and 1.
+\item Generate a 2D array of shape (100, 100) with random integers between 1 and 50.
+\item Generate 1000 random numbers pulled from a beta distribution with $a=1$ and $b=100$.
+\item Generate 10000 random numbers from a normal distribution with $\mu=5$ and $\sigma=2$.
+\end{enumerate}
+
+\subsubsection{Advanced Exercises}
+\begin{enumerate}
+\item Generate 100 random integers between 1, 10. Can you count how many instances of each number arise? (hint: could a dictionary make this trivial? Alternatively does \texttt{numpy} have something to do this in 1 line?)
+\item Do the same as for the previous questions but pulling from a normal distribution with mean $\mu=100$ and $\sigma=20$ and also for a Poisson distribution with the same mean. You will have to manually convert the floats returned by these random distributions to integers unless you want to properly bin the data.
+\item Plot the resulting binned counts (a histogram) from the normal and Poisson distribution. What happens if you increase the number of samples?
+\end{enumerate}
+
+\section{Treating Arrays as Matrices}
+
+\texttt{Numpy} also contains a sub-module (like \texttt{numpy.random} is a sub-module within \texttt{numpy}) for linear algebra, namely \texttt{numpy.linalg}. This, as you may have guessed, is a powerful sub-module for performing matrix operations on arrays. There is a lot within \texttt{numpy.linalg} but here we will give a quick run down of some of the more commonly used operations.
+
+Lets define 2 arrays.
+
+\begin{lstlisting}[style=PY]
+In [1]: arr1 = np.array([[1,2],[3,4]])
+        arr2 = np.array([[4,3],[2,1]])
+\end{lstlisting}
+
+
+We can then perform the dot product of these arrays.
+
+\begin{lstlisting}[style=PY]
+In [2]: np.dot(arr1, arr2)
+\end{lstlisting}
+\begin{lstlisting}[style=PY, backgroundcolor=\color{white}]
+Out[2]: array([[ 8,  5],
+               [20, 13]])
+\end{lstlisting}
+
+We can also extract the eigenvalues of one these matrices (arrays).
+
+\begin{lstlisting}[style=PY]
+In [3]: np.linalg.eigvals(arr1)
+\end{lstlisting}
+\begin{lstlisting}[style=PY, backgroundcolor=\color{white}]
+Out[3]: array([-0.37228132,  5.37228132])
+\end{lstlisting}
+
+Or compute the trace.
+
+\begin{lstlisting}[style=PY]
+In [4]: np.trace(arr1)
+\end{lstlisting}
+\begin{lstlisting}[style=PY, backgroundcolor=\color{white}]
+Out[4]: 5
+\end{lstlisting}
+
+Admittedly this is a very quick set of examples but beyond these \texttt{numpy.linalg} contains many many functions including advanced linear algebra functions and even tensor operations used in the toolkit of General Relativity. \\
+
+One of the more often used functions is the \texttt{norm} function. This computes the norm of an array but is particularly useful when calculating the radii of a bunch of 2 or 3 dimension coordinates. Lets treat the matrix above as an array of coordinate vectors.
+
+\begin{lstlisting}[style=PY]
+In [5]: # Get the norm of the whole array
+        print(np.linalg.norm(arr1))
+        
+        # Compute the radius of each coordinate
+        print(np.linalg.norm(arr1, axis=1))
+\end{lstlisting}
+\begin{lstlisting}[style=PY, backgroundcolor=\color{white}]
+        5.477225575051661
+        [2.23606798 5.        ]
+\end{lstlisting}
+
+Again this is just a quick run down of some common functions but should you find yourself doing any heavy lifting with linear algebra in theory or anything involving positions in simulations, you may find yourself using these functions often.
+
+\section{The \texttt{Where} Function}
+
+Lets imagine you have a very large array of values but you actually only care about a subset above a certain value threshold. You can easily do this by using Boolean indexing.
+
+\begin{lstlisting}[style=PY]
+In [6]: arr = rng.normal(10,2,1000)
+        arr[arr > 15]
+\end{lstlisting}
+\begin{lstlisting}[style=PY, backgroundcolor=\color{white}]
+Out[6]: array([15.52768816, 15.27558242, 15.0953834 , 
+               15.30399824, 15.28584537])
+\end{lstlisting}
+
+However, sometimes you may want to actually extract the indices themselves, this is where the \texttt{where} function comes in. The \texttt{where} function does exactly what it says on the tin, "where is the condition true".
+
+\begin{lstlisting}[style=PY]
+In [7]: np.where(arr > 15)
+\end{lstlisting}
+\begin{lstlisting}[style=PY, backgroundcolor=\color{white}]
+Out[7]: (array([237, 303, 700, 704, 825]),)
+\end{lstlisting}
+
+This is very very useful but does have its limitations when arrays begin to get \textbf{very} large (more than 10000000 elements on a modern Macbook Pro), here \texttt{where} becomes slower and there are other coding paradigms that begin to become a necessity at this scale.
+
+Although this is often how \texttt{where} is used this is actually a slight misuse of the function. The power of where lies in applying an operation or function to an element in an array where the condition is True. Doing this the syntax of \texttt{where} is \texttt{np.where(condition, array\_to\_apply\_to, operation)}.
+\begin{lstlisting}[style=PY]
+In [3]: # Define an arrays from lists
+        x = np.array([[1, 2], [1, 3], [4, 5], [6, 5], [9, 6]])
+        y = np.array([[3, 2], [5, 4], [1, 1], [7, 6], [8, 3]])
+        
+        # Add 10 to any value below 4
+        np.where(x < 4, x + 10, x)
+        
+        # The operation can be performed on a different array based on
+        # the condition applied to the original array or some compound
+        np.where(x - y < 4, y, y + 10)
+\end{lstlisting}
+
+Do note that \texttt{where} needs to be assigned to a new variable to maintain the changes, it is not performed inplace on the original array, instead creating a copy.
+
+\subsection{Exercises (with worked solutions)} \label{sec:exc_where}
+\begin{enumerate}
+\item Create a random array of numbers between 1 and 0. Use \texttt{where} or Boolean indexing to find how many lie above 0.5 and how many lie below.
+\item Take the array from the previous question and add 0.5 to any numbers below 0.5, check this has worked by ensuring there are no numbers below 0.5.
+\item Create 2 new arrays of numbers between 1 and 0. Add 0.5 to elements of array 1 where array 2 is less than 0.5. How many numbers lie below 0.5 in array 1?
+\end{enumerate}
+
+\subsection{Advanced Exercises}
+\begin{enumerate}
+\item Create 2 arrays of 1000 random numbers from a normal distribution with $\mu=5$ and $\sigma=2$. Plot them as a scatter plot with '+' markers. Then plot over the top of this plot with 'o' markers smaller than the '+' markers colouring each quadrant a different colour (hint: use \texttt{where}).
+\end{enumerate}
+
+\begin{tcolorbox}[colback=red!5!white,colframe=red!75!black]
+\section{Optimisation with \texttt{numpy}}
+
+It's already been mentioned in passing but one of the single best things about \texttt{numpy} is... IT'S FAST! A clever implementation of \texttt{numpy} can take code that takes hours down to minutes or even seconds. This is no exaggeration either, I have witnessed this first hand! 
+
+The reason for this is two-fold, firstly \texttt{numpy} is implemented in C, this makes it inherently faster at performing basic operations like multiplication of arrays but secondly it is "vectorised". Essential this means removing loops. What \texttt{numpy} is actually doing when you vectorise, is move the slow \texttt{python} loop into C which is executed much faster.
+
+We can probe this with an example utilising \texttt{\%timeit}, this allows you to define functions and time them to compare implementations and optimise your code. How fast your code can run can really begin to matter, either you're writing release code which needs to run in a certain time or research code which may work with "Big Data" meaning you need to write code which needs to be fast to actually finish in a reasonable time.
+
+An example of this is shown below multiplying a single array by 5.
+
+\begin{lstlisting}[style=PY]
+In [1]: # Define functions to test (simple with a lambda function)
+        vec_func = lambda x: x * 5
+        
+        def list_func(x):
+            # Loop over elements multiplying by 5
+            for ii, i in enumerate(x):
+                x[ii] = i * 5
+            return x
+        
+        # Define an array and list to test with
+        xs = rng.normal(10, 3, 1000)
+        ys = list(xs)
+        
+        # Time the implementations
+        %timeit vec_func(xs)
+        %timeit list_func(ys)
+\end{lstlisting}
+\begin{lstlisting}[style=PY, backgroundcolor=\color{white}]
+        1.57 us +/- 78.9 ns per loop (mean +/- std. dev. of 7 runs, 1000000 loops each)
+        302 us +/- 30.7 us per loop (mean +/- std. dev. of 7 runs, 1000 loops each)
+\end{lstlisting}
+
+Notice that not only is the \texttt{numpy} implementation 100 times faster on this simple operation, it is also far more consistent with a standard deviation of the order of nanoseconds! This is a very contrived example but well displays how effective an intelligent \texttt{numpy} implementation can be.
+
+\end{tcolorbox}
+
+This marks the end of this introductory \texttt{numpy} chapter. Next chapter we will look into applications of what you have learnt to real data which will contain some more (and more interesting parts) of \texttt{numpy}.
+
+\section{Worked Solutions}
+\textbf{\ref{sec:exc_array}}
+
+\begin{lstlisting}[style=PY]
+In[1]   # Question 1
+        arr = np.zeros(10)
+        for index in range(10):
+            arr[index] = index**2
+        
+        # Question 2
+        arr2 = np.full(10,-2) * -2
+        
+        # Question 3
+        arr.sum()
+        arr.mean()
+        arr.std()
+        np.median(arr)
+\end{lstlisting}
+
+\textbf{\ref{sec:exc_random}}
+\begin{lstlisting}[style=PY]
+  In[2] # Import rng
+        from numpy.random import default_rng
+        rng = default_rng()
+
+        # Question 1
+        rng.random(100)
+        
+        # Question 2
+        rng.integers(1, 50, (100, 100))
+        
+        # Question 3
+        rng.beta(1, 100, 1000)
+        
+        # Question 4
+        rng.normal(5, 2, 10000)
+\end{lstlisting}
+
+\textbf{\ref{sec:exc_where}}
+\begin{lstlisting}[style=PY]
+In[3]   # Question 1
+        arr = rng.random(100)
+        print(np.where(arr > 0.5)[0].size)
+        print(np.where(arr < 0.5)[0].size)
+        
+        # Question 2
+        arr2 = np.where(arr < 0.5, arr + 0.5, arr)
+        print((arr2 < 0.5).sum())
+\end{lstlisting}
+\newpage
+\begin{lstlisting}[style=PY]
+        # Question 3
+        arr1 = rng.random(100)
+        arr2 = rng.random(100)
+        
+        arr3 = np.where(arr2 < 0.5,arr1 + 0.5, arr1)
+        (arr3 < 0.5).sum()
+\end{lstlisting}

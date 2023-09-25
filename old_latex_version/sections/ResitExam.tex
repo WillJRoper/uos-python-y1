@@ -1,0 +1,71 @@
+\chapter{Python Resit Assignment}
+\label{resit}
+
+\section{Instructions}
+
+{\bf Resit preparation:}  You need to have worked through all chapters of the lab script.\\
+
+{\bf Formatting and Commenting your code:} Get into good coding habits early: you code should look neat and include comments at least every 5 lines. Please use a {\it single cell} for each part of the question. Some parts of your code may need higher comment density than others.\\
+
+{\bf Collusion and Plagiarism:} You are expected to write your code independently. If at any time you are using ``cut and paste'' from someone else's work then you are doing something wrong and you need to stop.\\
+
+{\bf Zombie codes:} One mark will be deducted if your code gets trapped in a loop and the grader has to crash out of it \\
+
+\section{Assessment description}
+
+Total marks available = 20
+
+%\renewcommand{\labelenumi}{\alph{enumi})}
+
+\begin{enumerate}
+    \item (2 marks) Submit a Jupyter notebook with a file name that can be anything you like, as long as it ends in  {\tt .ipynb}, e.g. {\tt bananas.ipynb}, to Sussex Direct. Don't use spaces in your filename. Canvas will anyway rename it with your name. Please note that for questions 1) through 8) you should submit just one file that ends in .ipynb, i.e. no .tar, .rar, .pdf, .doc etc. files. Each part of the question should be in its own cell. \\
+    \begin{itemize}
+        \item In the top cell, use the {\tt input} function to ask for a first name, and have the code print out ``Hello, your name is X, which has Y letters'', where X is the value returned from {\tt input} and Y is calculated from the {\tt input} value. {\it }.
+    \end{itemize}
+
+    \item (2 marks) Using the {\tt input} command: 
+    \begin{itemize}
+        \item ask for a surname and assign to a variable. 
+        \item Using the first name from question one, check if there are more letters in the surname than the first name, making sure either {\tt True} or {\tt False} are displayed on the screen
+        \item Print a list containing the lengths of the first name and surname.
+    \end{itemize}
+    
+    \item (2 marks) 
+    \begin{itemize}
+        \item Set a variable called {\tt temp} and assign an integer value of between -10 and 45 to it.
+        \item Using {\tt if} statements print (``It's very hot, stay out of the sun'' ) if {\tt temp} is 35 or above, (`` It's quite warm, don't get dehydrated'') if {\tt temp} is between 20 and 34, (`` It's jumper weather'') if {\tt temp} is between 10 and 19, (`` It's coat weather'') if {\tt temp} is between 0 and 9, and (`` It's freezing, wear hat and gloves'') if less than 0.
+        \item Adapt your code so that if temp is out side of the range -10 and 45, it replies `` Temperature reading is extreme, possible malfunction''
+    \end{itemize}
+    
+    \item (2marks) Define a function which takes in a lower and upper limit, and an integer, {\tt n} and returns a list of {\tt n} random numbers between the inputted lower and upper limits, using the uniform distribution from the {\tt random} module.
+    
+    \item (3 marks) Using the {\tt pandas} module:
+    \begin{itemize}
+        \item read in the .csv file {\tt AstroDistanceTable.csv}.
+        \item Use {\tt matplotlib} to plot redshift vs Luminosity distance as a blue line.
+        \item Add appropriate labels for the x and y axis.
+    \end{itemize}
+    
+    \item (3 marks) Using the {\tt numpy.arange} function: to create a variable called {\tt x} which has values from -10 up to and including 10. 
+    \begin{itemize}
+        \item create a variable called {\tt x} which has values from -10 up to and including 10 and define a function which takes {\tt x} as input and returns $x^2 + 2x + 4$
+        \item Use your function with $x$ and assign answer to $y$
+        \item Using the {\tt matplotlib} module, make a scatter plot, with red circles and use {\tt numpy.min} and {\tt numpy.max} to set the y limit plots to the minimum and maximum y values.
+    \end{itemize}
+    
+    \item (3 marks) Using the {\tt numpy.random.normal} function:
+    \begin{itemize}
+        \item Generate a 2D 20x20 array of random values, with a mean of 4 and standard deviation of 100.
+        \item Using a Boolean condition, set any values in the array that are below -10, to {\tt numpy.nan}
+        \item Use {\tt imshow} function in {\tt matplotlib} to plot the 2D array as an image, using the {\tt inferno} colourmap and removing the axes.
+    \end{itemize}
+    
+    \item (3 marks) Using the equation $D_L = \frac{2c}{H_0} \left( 1-\sqrt{\frac{1}{1+z}} \right )(1+z)$:
+    \begin{itemize}
+        \item Define a function to return the luminosity distance, with redshift and the Hubble constant ($H_0$) as input, and $c=3E5$
+        \item Using the {\tt curve\_fit} function from {\tt scipy}, fit your function using the { \tt Redshift} column from the {\tt AstroDistanceTable.csv} file as $x$ values.
+        \item Using your fitted value of $H_0$ and your luminosity distance function, plot redshift vs luminosity distance with a red line and the redshift vs luminosity distance from  {\tt AstroDistanceTable.csv} as a blue line. Make sure your plot has appropriate axes labels.
+    \end{itemize}
+    
+    
+\end{enumerate}
