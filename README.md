@@ -1,7 +1,7 @@
 # Introduction to Python
 
 <p align="center">
-  <img src=".images/pythonxkcd.png">
+  <img src="images/pythonxkcd.png">
 </p>
 
 The \texttt{Python} programming language is ubiquitous in science, especially in Physics. It is an extremely powerful tool that can be utilised for everything from making simple games to simulating the evolution of the Universe. In fact, "Big Tech" companies such as Google and Facebook use `Python` behind the scenes of many services you use daily. 
