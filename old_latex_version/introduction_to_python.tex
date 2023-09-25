@@ -1,0 +1,83 @@
+\documentclass[12pt, twosides]{report}   	
+\usepackage{import} 
+\usepackage[utf8]{inputenc}
+\input{sections/packages.tex}
+
+\begin{document}
+\input{sections/frontPage.tex}
+%\maketitle
+\pagenumbering{roman}
+
+%\addcontentsline{toc}{section}{Preface}
+%\input{Outline/PythonYearOneOutline.tex}
+%\newpage
+
+\newpage
+\clearpage
+\fancyhead[r]{\leftmark}
+\tableofcontents
+
+\clearpage
+
+\chapter{Introduction}
+% \chapterauthor{W. Roper; R. Wilkinson; D. J. Turner; A. K. Romer; M. Hubbard;}
+\input{sections/introduction.tex}
+
+\chapter{Some Useful Terminology}
+\input{sections/glossary.tex}
+
+\chapter{Jupyter: Quick reference}
+\input{sections/jupyter_shortcuts.tex}
+
+\pagenumbering{arabic}
+\chapter{The Basics}
+%\chapterauthor{PRATS}
+\label{chap:jupyter}
+\input{sections/week1.tex}
+
+\chapter{Strings, Booleans, Tuples and Lists}
+%\chapterauthor{PRATS}
+\label{chap:listsloops}
+\input{sections/week2.tex}
+
+\chapter{Conditionals, Loops and Functions}
+%\chapterauthor{PRATS}
+\label{chap:funcs}
+\input{sections/week3.tex}
+
+\chapter{Python Modules and an Introduction to Plotting}
+%\chapterauthor{PRATS}
+\input{sections/week5.tex}
+
+\chapter{Introduction to Data and Pandas}
+%\chapterauthor{PRATS}
+\input{sections/week6.tex}
+
+\chapter{Numpy and Arrays}
+\label{chap:numpy}
+%\chapterauthor{Will Roper}
+\input{sections/week8.tex}
+
+\chapter{Scientific Python}
+\label{chap:sci}
+%\chapterauthor{PRATS}
+\input{sections/week9.tex}
+
+% \chapter{Introduction to Scientific Computing}
+%\chapterauthor{W. Roper}
+% \input{sections/introSciComp.tex}
+
+%\chapter{Introduction to C++}
+%\chapterauthor{A. Borkum}
+%\label{chap:cpp}
+% \input{sections/cpp.tex}
+
+% \appendix
+
+% \input{sections/APS1.tex}
+
+% \input{sections/APS2.tex}
+
+% \input{sections/APS3.tex}
+% \input{sections/ResitExam}
+\end{document}

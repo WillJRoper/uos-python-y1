@@ -1,0 +1,798 @@
+
+\chapter{Glossary}
+\label{Glossary}
+
+{\bf \Large WARNING for students in 2018: this glossary might include things that are not compatible with Python 3 - please point out anything that seems wrong. Thank you!}\\
+
+{\bf Based on a version developed for the Y1 Python sub-module by Elizabeth Swan and Michael Hubbard.}\\
+
+\linespan
+
+\noindent
+Anything in \texttt{typewriter} font is what you would type into python.\\
+Anything in \textbf{bold} with $>>>$ in front, is what python will print to the screen.\\
+Note, Python counts starting at 0. If you want to find the first character of a word, you have to ask it for the $0^{th}$ character, the $1^{st}$ character for the $2^{nd}$, and so on.
+
+
+\linespan
+\section*{\underline{Commands}}
+\begin{longtable}{l p{11cm}}
+\texttt{Print} & Prints to the screen
+
+ \texttt{{\color{purple}print} ("hello world.")} will make python show the words
+ 
+  \textbf{$>>>$hello world.} \\[1ex]
+\texttt{q}&Quit symbol
+
+Press the q key to exit the inbuilt python help document.\\[1ex]
+Up key & Will copy and paste your last commands into python while using linux cluster.
+Use the 'up' key on your keyboard to get python to copy and paste your last commands. Useful tool, as python does not allow copy and paste while in linux cluster. When operating in IDLE highlight code with mouse and press Ctrl + c, to copy and then Ctrl + v to paste in code.\\[1ex]
+Ctrl + c & Stops python running the current script.
+
+Will stop python running if your program is taking too long or getting out of control (useful if you accidentally make an infinite loop, this will stop python crashing the ITS servers).\\[1ex]
+\texttt{!}& Not the symbol
+
+When using \texttt{!} in a command, \texttt{!} means 'not'. E.g., \texttt{x!=2} means x does not equal 2.\\[1ex]
+\texttt{[ ]} & Defines a list
+
+E.g. \texttt{x=[1,2,3]} means x is a list of numbers 1,2 and 3 \\[1ex]
+\texttt{( )} & Defines a tuple.
+
+Tuples are values separated by commas. You cannot make a list with tuples or define a list or change a tuple list.
+E.g. \texttt{t=(12345, 'James', 'Max')}
+
+If we then ask python to give us the first value of this list by using 
+
+\texttt{t[0]} , (remember python starts counting at 0, not 1), python returns 
+\textbf{$>>>$12345}\\[1ex]
+
+\texttt{' '} & Defines a string.
+
+Put single quotation marks around characters to define a string. A string is anything that is not a number or a value, so any words or phrases. Double quotation marks can also be used.\\[1ex]
+
+\texttt{" "} & Defines a string.
+
+Put double quotation marks around characters to define a string. A string is anything that is not a number or a value, so any words or phrases. Single quotation marks can also be used.\\[1ex]
+
+\textbackslash \texttt{n} & Starts a new paragraph
+
+For use in strings when wanting to start a new paragraph.
+
+E.g., \texttt{{\color{purple}print} "Hello.} \textbackslash \texttt{n} \texttt{My name is James".}
+
+\textbf{$>>>$Hello}
+
+\textbf{$>>>$My name is James} \\[1ex]
+
+\texttt{\#} & Start a line of normal text.
+
+This will allow you write a line of normal text when putting \texttt{\#} in front of a sentence, useful for commenting on your work.\\[1ex]
+
+\texttt{=} & Assign a value to a variable.
+
+E.g. \texttt{x=[1,2,3]}
+
+E.g. \texttt{Height=175}
+
+{\color{red}NOT TO BE CONFUSED WITH ==}, which is the mathematical symbol for equal to.\\[1ex]
+
+\texttt{abs(x)} & Absolute value of x.
+
+Python will print the absolute value of x.\\[1ex]
+
+\texttt{int(x)} & x is converted to an integer.
+
+Will turn your value for x into an integer.\\[1ex]
+
+\texttt{float()} & Floats a value.
+
+Turns a value into a number. When importing data from elsewhere on your computer, it will assume that it is all text. If you want to use a list of numbers, you have to float them to turn them into numbers. 
+
+E.g. \texttt{{\color{purple}float}(x\textunderscore values)}.\\[1ex]
+
+\texttt{show()} & Show.
+
+Will make python show you your previous command. Example, if x is a list of numbers, \texttt{show(x)} will make python print the list of numbers.\\[1ex]
+
+\texttt{len()} &  The length of a string. 
+
+This can be the number of characters, or the number of files in a folder, etc.E.g. \texttt{x = 'blahblahblah'}
+
+\texttt{{\color{purple}len}(x)}
+
+\texttt{$>>>$12}\\[1ex]
+
+\end{longtable}
+
+\section*{\underline{Basic Mathematics}}
+\begin{longtable}{l p{11cm}}
+\texttt{+}&Add\\[1ex]
+\texttt{-}&Minus\\[1ex]
+\texttt{*}&Multiply\\[1ex]
+\texttt{/}&Divide\\[1ex]
+\texttt{==}&Equal to\\[1ex]
+\texttt{!=}&Not equal to\\[1ex]
+\texttt{\^{}}&To the power of\\[1ex]
+\texttt{$>$}&Strictly greater than\\[1ex]
+\texttt{$<$}&Strictly less than\\[1ex]
+\texttt{$>$=}&Greater than or equal to\\[1ex]
+\texttt{$<$=}&Less than or equal to\\[1ex]
+\texttt{x\%y}&The remainder when x is divided by y\\[1ex]
+\texttt{j}&Used after a number, it will turn it into an imaginary number.
+
+E.g. \texttt{2j} is two times the square root of $-1$\\[1ex]
+\end{longtable}
+
+\section*{\underline{Scatter Graph Plotting} - ({\color{red}For use with pylab})}
+
+\noindent \texttt{plot(x,y,'c m')}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+Plots a scatter graph of x vs. y in a colour denoted by c, and a marker denoted by m.\\
+E.g. \texttt{plot(x, y, 'b *')} will plot x vs. y in blue stars.
+\end{myindentpar}
+
+\begin{center}
+\begin{tabular}{|l | p{2cm}|}
+\hline
+b & blue\\\hline
+g & green\\\hline
+r & red\\\hline
+c & cyan\\\hline
+m & magenta\\\hline
+y & yellow\\\hline
+k & black\\\hline
+w & white \\\hline
+\end{tabular}
+\hspace{4ex} 
+\begin{tabular}{|l | p{3cm}|}
+\hline
+s & square\\\hline
+p & pentagon\\\hline
+\texttt{*} & star\\\hline
+h & hexagon\\\hline
+d & thin diamond\\\hline
++ & plus\\\hline
+x & cross\\\hline
+D & diamond\\\hline
+- & line\\\hline
+\end{tabular}
+\end{center}
+
+\newpage
+\noindent \texttt{x=arange(start, finish, increment)}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+Will create a list of numbers.\\
+Your list will start at the start number, end at the finish number and go up in increments of your choice. (Increments are optional, if you leave them out python will create an array of integers.)\\
+E.g. \texttt{x=arange(1,5.5,0.5)}\\
+\texttt{show(x)}\\
+\textbf{$>>>$1 1.5 2 2.5 3 3.5 4 4.5 5}
+\end{myindentpar}
+
+
+\noindent \texttt{xlabel}, \texttt{ylabel}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+Creates x and y labels for the axis of your graph\\
+E.g. \texttt{xlabel('speed')}\\
+Will give your x axis a title of speed.\\
+E.g. \texttt{ylabel('time')}\\
+Will give your y axis a title of time.
+\end{myindentpar}
+
+\noindent \texttt{title}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+Will give your graph a title.\\
+E.g. \texttt{title('Speed vs. Time')}\\
+Your graph will get the title Speed vs. Time.
+\end{myindentpar}
+
+\noindent \texttt{legend}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+Will give your graph a legend (a key) when you have multiple plots on the same graph\\
+E.g.\texttt{legend([plot1, plot2],('line1', 'line2'),'best', numpoints=1)}\\
+Your graph will get a legend on your plots of plot1 and plot2 where your lines are called line1 and line 2.
+\end{myindentpar}
+
+\noindent \texttt{errorbar}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+Will give your graph error bars\\
+E.g., where x and y are your data points, and you have defined your y errors as f and your x errors as g.\\
+\texttt{errorbar(x, y, linestyle='none',  yerr=f,  xerr=g)}\\
+And you will get error bars with y errors of f and x errors of g.
+For asymmetric error bars, replace f with [-y,+y] where–y is defined as your negative error, and +y as your positive error. Same for x. 
+\end{myindentpar}
+
+\noindent \texttt{figure(name)}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+To assign a variable to a plot or figure you have created in python, use figure. Name is the variable you wish to assign to your picture. This would be typed in separately after you have created to figure.                \\
+E.g. \texttt{a=plot(x,y)}\\
+\texttt{figure(1)}\\
+and your plot will now be called '1'
+\end{myindentpar}
+
+\newpage
+\noindent \texttt{savefig('Directory.extension')}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex} 
+To save a plot or a figure, use save fig, where the directory is where you want to save the image, and the extension is the format you want to save the image in, png, jpeg etc. You can only do this if you have named your figure previously using \texttt{figure(name)}\\
+E.g.\texttt{figure(1)}\\
+\texttt{savefig('Desktop/Python/Plot.png')}\\
+Will save your figure1, now called Plot, to your desktop, in a folder called python as a png.
+\end{myindentpar}
+
+\section*{\underline{Histogram Plotting}  - ({\color{red}For use with pylab})}
+To format the histograms axis, title colour etc., it is the same as doing it to a scatter graph.\\[2ex]
+\noindent \texttt{hist(x, bins=a)}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex} 
+This will create a histogram where x are your data values which will distributed into a number of bins a. 
+\end{myindentpar}
+
+\noindent \texttt{hist(x, bins=a, normed=True)}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+Inserting \texttt{normed=true} will plot the values as a probability distribution. Python will integrate the total area of the whole histogram, and scale the values appropriately so the total area under the histogram is equal to 1.
+\end{myindentpar}
+
+
+\noindent \texttt{hist(x, bins=a, cumulative=True)}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+Inserting \texttt{cumulative=True} will create a cumulative frequency histogram. Note, using normed=True and cumulative=True will create a cumulative distribution function which shows the probability of finding a number in its own bin or a lower bin.
+
+\end{myindentpar}
+
+\section*{\underline{Line of Best Fit}  - ({\color{red}For use with pylab})}
+
+\noindent \texttt{polyfit(x, y, degree)}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+This is the best way to create a line of best fit. polyfit will return a vector of coefficients that minimised the squared error. (Basically, it returns your intercept and your gradient) You should assign a variable to your polyfit function. I will use 'g'.\\
+\texttt{g =polyfit (x, y, 1}) where x and y are your set of data, and degree is the degree to which you are plotting the line (E.g., for a straight line, the degree is 1, for an $x^{2}$ line, degree is 2 etc).
+\end{myindentpar}
+
+\noindent \texttt{poly1d(a,b,c)}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+Poly1d will create a polynomial function from variables where a, b and c are your coefficients.\\
+E.g. \texttt{p = poly1d(1,2,3})\\
+\texttt{show(p)}\\
+\textbf{$>>>$x$^{2}$ + 2x +3}\\
+Hint: If you have a list of numbers and you have assigned them to a variable then you can use polyfit(g) to create a straight line.
+\end{myindentpar}
+
+\noindent \texttt{linspace(start, finish, numberofpoints)}
+
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+Similar to the arrange function but generates evenly spaced numbers depending on the number of points you want, not the increments.\\
+E.g. \texttt{x1= linspace(0,10,11)}\\
+\texttt{x1}\\
+\textbf{$>>>$0  1  2  3  4  5  6  7  8  9  10}\\
+Hint, think about how you use polynomial fit to generate a line of best fit in excel.
+
+\end{myindentpar}
+
+\section*{\underline{Importing CSV files}}
+To do these things you will need to import the python module csv.\\[2ex]
+\noindent \texttt{csv.reader(open('directory.csv'))}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+This will import a csv file into python. The directory is where your csv file is stored.\\
+E.g. \texttt{csv.reader(open('Desktop/Python/Data.csv')}\\
+will open a csv file called data on your desktop in a folder called python.\\
+Remember, any numbers in the csv file will be \textit{strings} when they are imported. You will need to \textit{float} them to use them as numbers.
+\end{myindentpar}
+
+\section*{\underline{Creating Picture Files}}
+To do these things you will need to import the python module Image.\\[2ex]
+\noindent \texttt{Image.open('FileDirectory.extension')}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+This will open the image file where the file directory is the path to which the image is saved and the extension is the format the file is saved in, E.g. png, jpeg, etc.
+
+\end{myindentpar}
+
+\noindent \texttt{Image.resize((a, b))}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+This will resize the image to be a pixels by b pixels.
+\end{myindentpar}
+
+\noindent \texttt{Image.rotate(45)}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+This will rotate the image 45 degrees counter clockwise.
+\end{myindentpar}
+
+\noindent \texttt{Image.transpose(x.FLIP\textunderscore LEFT\textunderscore RIGHT)}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+This will flip the image over its vertical axis, where x is the assigned variable to the image.
+\end{myindentpar}
+
+\noindent \texttt{Image.transpose(x.FLIP\textunderscore TOP\textunderscore BOTTOM)}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+This will flip the image over its horizontal axis, where x is the assigned variable to the image.
+\end{myindentpar}
+
+\newpage
+\noindent \texttt{Imsave('Directory.extension', imagename)}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+To save an  image use imsave, where the directory is where you want to save the image, and the extension is the format you want to save the image in, png, jpeg etc.\\
+E.g.\texttt{ a = zeros((100,100))}\\
+\texttt{Imsave('Desktop/Python/Picture.jpeg',a)}\\
+Will save your picture that you created and called 'a' in jpeg format in a folder called python on your desktop.\\
+Note, this will not create a folder to put your picture into, just saves it to an existing folder.
+\end{myindentpar}
+
+\section*{\underline{Using Linux, and running scripts}}
+\noindent \texttt{gedit  \&}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+To open up a scripting file in python, before typing in \texttt{pylab –ipython}, type in \texttt{gedit \&}. This will open up a scripting window for you. The advantages of a scripting window is that you can copy and paste and edit the script as you go along without having to type it all out again. 
+\end{myindentpar}
+
+\noindent \texttt{Open a script file}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+To open a scripting file previously saved, you just open the scripting window as normal, and click 'open' on the top left side.
+\end{myindentpar}
+
+\noindent \texttt{Running a script file}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+Type \texttt{pylab –ipython} in the Linux terminal first then to run a script file, in the normal python window type\\
+\texttt{run Desktop/Python/script.py}\\
+Using the directory of the file to help python locate it.
+\end{myindentpar}
+
+\noindent \texttt{pwd}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+Type \texttt{pwd} in the Linux terminal, this will print your current working directory.
+\end{myindentpar}
+
+\noindent \texttt{ls}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+Type \texttt{ls} in the Linux terminal, this will print a list of files and folders in your current working directory.
+\end{myindentpar}
+
+\noindent \texttt{cd}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+Type \texttt{cd} in the Linux terminal, followed by a directory name or path. If the directory is in your current directory it will change to the one you selected e.g \texttt{cd My\_folder}. To navigate to a directory outside your current directory type its path for example \texttt{cd /home/user/Documents/Pictures}. To go up a directory level type \texttt{cd ..}
+\end{myindentpar}
+
+\section*{\underline{The Random Module}}
+\noindent \texttt{random.range(start, stop, step)}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+Will return a randomly selected element from the created range.
+\end{myindentpar}
+
+\noindent \texttt{random.randit(a,b)}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+Will return a random integer between a and b.
+\end{myindentpar}
+
+\noindent \texttt{random.choice(sequence)}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+Will return a random element from a defined sequence or list.
+\end{myindentpar}
+
+\noindent \texttt{random.shuffle(sequence)}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+Will randomly shuffle all elements in a sequence or list.
+\end{myindentpar}
+
+\noindent \texttt{random.random}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+Will return a random number between 0.0 and 1.0.
+\end{myindentpar}
+
+\noindent \texttt{random.gauss(mu, sigma)}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+Will return a Gaussian function where mu is the mean and sigma is the standard deviation.
+\end{myindentpar}
+
+\section*{\underline{Slicing}}
+\noindent \texttt{s[i]}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+Takes the $i^{th}$ item of a string or a list, s. (Remember, python starts counting at 0.)
+E.g. \texttt{s= 'Elizabeth Swann'}\\
+\texttt{s[8]}\\
+\textbf{$>>>$h}\\
+\texttt{s[0]}\\
+\textbf{$>>>$E}
+\end{myindentpar}
+
+\noindent \texttt{s[i:j]}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+A slice of s from the $i^{th}$ term up to and not including the $j^{th}$ term.\\
+E.g. \texttt{s= 'Elizabeth Swann'}\\
+\texttt{s[0:3]}\\
+\textbf{$>>>$Eli}
+\end{myindentpar}
+
+%s[i] = x
+%s[i:j] = x
+%s[i:j] = []
+%Don't work?
+
+\noindent \texttt{s[:i]}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+Slices a list up to and not including the first $i^{th}$ characters.\\
+E.g. \texttt{s= 'Elizabeth Swann'}\\
+\texttt{s[:2]}\\
+\textbf{$>>>$El}
+\end{myindentpar}
+
+\noindent \texttt{s[i:]}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+Create a slice from and including the $i^{th}$ character to the end.\\
+E.g. \texttt{s= 'Elizabeth Swann'}
+\texttt{s[10:]}\\
+\textbf{$>>>$Swann}
+\end{myindentpar}
+
+\hypertarget{arrays}{\section*{\underline{Creating Arrays}}}
+
+Use with numpy or pylab. When creating an array, all elements have to be of the same type. I.e. all integers, all floats, all complex numbers, etc.\\[2ex]
+\noindent \texttt{array([a,b,c], int)}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+Creates a one dimensional array created made up of the integers a, b and c.
+\end{myindentpar}
+
+\noindent \texttt{array(((a,b,c), (d,e,f), (h,i,j)))}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+Creates a two dimensional array made up of the elements a, b, c, d, e, f, g, h, i and j. This is how you create a vector or a matrix.\\
+E.g. \texttt{x=array(((1,2,3), (4,5,6), (7,8,9)))}\\
+\texttt{{\color{purple}print} x}\\
+\textbf{$>>>$[[a, b, c],}\\
+\-\hspace*{0.905cm} \textbf{[d, e, f],}\\
+\-\hspace*{0.76cm} \textbf{   [g, h, i]]}
+\end{myindentpar}
+
+\noindent \texttt{x.ndim}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+Tells us the number of dimensions in an array.\\
+E.g. \texttt{blah=array(((1,2,3), (4,5,6), (7,8,9)))}\\
+\texttt{blah.ndim}\\
+\textbf{$>>>$2}
+\end{myindentpar}
+
+\noindent \texttt{x.flatten()}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+Flattens an array out into a list.\\
+E.g. \texttt{bump=array(((1,2,3), (4,5,6), (7,8,9)))}\\
+\texttt{bump = bump.flatten()}\\
+\texttt{{\color{purple}print} bump}\\
+\textbf{$>>>$([1, 2, 3, 4, 5, 6, 7, 8, 9])}
+\end{myindentpar}
+
+\noindent \texttt{ones((a, b))}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+Creates an array of 1s a rows long and b columns wide.\\
+E.g. \texttt{bloop=ones((2, 3))}\\
+\texttt{{\color{purple}print} bloop}\\
+\textbf{$>>>$[[1, 1, 1]}\\
+\-\hspace*{0.905cm} \textbf{[1, 1, 1]]}
+\end{myindentpar}
+
+\noindent \texttt{zeros((a, b))}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+Creates an array of 0s a rows long and b columns wide.\\
+\texttt{{\color{purple}print} boom}\\
+\textbf{$>>>$[[0, 0, 0]]}
+\end{myindentpar}
+
+\section*{\underline{Creating Directories}}
+\noindent \texttt{os}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+This is the name of a module used to create directories. You will have to import this module to get python to create folders and paths for you.
+\end{myindentpar}
+
+\noindent \texttt{os.makedirs('Directory')}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+This will get python to create a folder on your computer.\\
+E.g. \texttt{os.makedirs('Desktop/Python')}\\
+will create a folder called python on your desktop.
+\end{myindentpar}
+
+\section*{\underline{Making Plots from Pictures}}
+To create a plot from a picture you need to first slice the picture into arrays so that python can translate the image into a plot. From this, you can then use the plot function as described in the scatter graph section.
+
+\section*{\underline{Using HTML to create tables}}
+Using python to create html tables is very useful, as you can use loops in your code to generate table cells automatically and put objects in them. This saves you having to write an entire html code, which are usually very long winded. To do that, combine your knowledge of while loops with html code writing.
+
+\noindent \texttt{html = open('Directory.html', 'wr+')}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+This is what you need to do first whenever you start a html file. This will tell python where to save the html file when it is finished. The directory is the path that the html file will be saved to. The wr+ is a code you need to put in to make python write the file.
+\end{myindentpar}
+
+\noindent \texttt{html.write()}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+This will allow you to start writing a html file. Inside the brackets you write the html code you want python to implement.
+\end{myindentpar}
+
+\noindent \texttt{html.close()}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+This is how you signify that a html file is finished, you want to close it and run it.
+\end{myindentpar}
+
+\noindent \texttt{html.write('<table border=1>} \textbackslash\texttt{n')}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+To start writing a html table, you must specify the conditions of the table, most commonly the border thickness. All html code is input in $<>$ brackets. As html code is a string it will always be contained in speech marks. The \textbackslash n tells python you have finished with your html code for this line. Note: To start a html table you can also use \texttt{html.write('<table>'} \textbackslash\texttt{n)} and python will choose the most appropriate conditions for your table automatically.
+\end{myindentpar}
+
+\noindent \texttt{html.write('</table>} \textbackslash\texttt{n')}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+This is how you end a html table. This must be put in before you try and run the code. This is especially true if your html table is created by a loop code.
+\end{myindentpar}
+
+\noindent \texttt{<tr>\lfill </tr>}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+$<$tr$>$ means 'Start a row in a table.' $<$/tr$>$ means 'End row in the table'. Anything written in between is what will be written in that row.
+\end{myindentpar}
+
+\noindent \texttt{<td>\lfill </td>}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+$<$td$>$ means 'Start a column in a table.' $<$/td$>$ means 'End column in the table'. Anything written in between is what will be written in that column. When combined, $<$tr$><$td$>$ will create a table in a cell.
+\end{myindentpar}
+
+\noindent \texttt{Writing a table example.}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+This is the full code to create a basic html file containing a table, which will be save to your desktop under the file name FruitTable.html\\
+\texttt{html = {\color{purple}open}('Desktop/FruitTable.html','wr+')\\
+html.write('<table border=1> $\backslash$n')\\
+html.write('<tr><td>Apple</td><td>Pear</td></tr> $\backslash$n')\\
+html.write('<tr><td>Cherry</td><td>Grape</td></tr> $\backslash$n')\\
+html.write('</table> $\backslash$n')\\
+html.close()}\\
+$>>>$ \begin{tabular}{|l|l|}
+\hline
+Apple & Pear \\ \hline
+Cherry & Grape \\ \hline
+\end{tabular}\\ 
+{\color{red} Note: This is what will appear in the html file \textit{FruitTable.html}, not within the python window.}
+\end{myindentpar}
+
+\section*{Dictionaries}
+\noindent \texttt{dictionary =} \{ \}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+Typing \texttt{dictionary =} \{{\tt 'key':'value','name':'number'}\} creates a dictionary with key and value pairs.
+\end{myindentpar}
+\noindent \texttt{dictionary['key'] = 'new'}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+Typing \texttt{dictionary['key'] = 'new'} adds or appends a key and a value.
+\end{myindentpar}
+
+\noindent \texttt{dictionary['key'] = 'new'}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+Typing \texttt{dictionary['key'] = 'new'} adds or appends a key and a value.
+\end{myindentpar}
+
+\noindent \texttt{del dictionary['key']}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+Typing \texttt{del dictionary['key']} removes a key and its value.
+\end{myindentpar}
+
+\noindent \texttt{dictionary.keys()}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+Typing \texttt{dictionary.keys()} prints a list of keys in the dictionary.
+\end{myindentpar}
+
+\noindent \texttt{dictionary.values()}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+Typing \texttt{dictionary.values()} prints a list of values in the dictionary.
+\end{myindentpar}
+
+
+\noindent \texttt{dictionary.items()}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+Typing \texttt{dictionary.items()} prints a list of keys and their values in the dictionary.
+\end{myindentpar}
+
+
+\newpage
+
+\section*{\underline{For loops}}
+\noindent \texttt{for variable in list}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+This is a statement which will make python look at each variable in a list in turn and do something with the term depending on what you have asked it to do. There are numerous things you can do with for loops, but they all follow this basic principle of for variable in list.\\
+E.g. \texttt{list1=['Bob','the universe',42]\\
+{\color{orange}for} item {\color{orange}in} list1:\\
+\phantom{tab} {\color{purple}print} "The Current item is:", item}\\
+\textbf{$>>>$The Current item is: Bob\\
+\phantom{$>>>$}The Current item is: the universe\\
+\phantom{$>>>$}The Current item is: 42}
+\end{myindentpar}
+
+\section*{\underline{If, else and elif statements}}
+
+\noindent \texttt{if variable is \lfill then \lfill}
+\begin{myindentpar}{1.1cm}
+\vspace*{-1ex}
+This allows you to loop through a list or an array and if any variables meet your conditions, then a certain code will act on them.\\
+E.g. \texttt{x=[100, 2, 79, 105]\\
+{\color{orange}for} i {\color{orange}in} x:\\
+\phantom{tab}{\color{orange}if} i>=100: \\
+\phantom{tabtab}{\color{purple}print} 'The term number', i ,'is greater than or equal to 100'} \\
+\textbf{$>>>$The number 100 is greater than or equal to 100\\
+\phantom{$>>>$}The number 105 is greater than or equal to  100}
+\end{myindentpar}
+
+\noindent \texttt{if variable is \lfill then \lfill else \lfill}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+An else statement can be combined with an to run two separate bits of code on separate variables depending on conditions you set.\\
+E.g. \texttt{x=[5, 9, 10, 12, 68, 34, 57, 19]\\
+{\color{orange}for} i {\color{orange}in} x:\\
+\phantom{tab}{\color{orange}if} (i/2) < 15: \\
+\phantom{tabtab}{\color{purple}print} "This number is too small"\\
+\phantom{tab}{\color{orange}else}:\\
+\phantom{tabtab}{\color{purple}print} "This number is great, thank you"}\\
+\textbf{$>>>$This number is too small\\
+\phantom{$>>>$}This number is too small\\
+\phantom{$>>>$}This number is too small\\
+\phantom{$>>>$}This number is too small\\
+\phantom{$>>>$}This number is great, thank you\\
+\phantom{$>>>$}This number is great, thank you\\
+\phantom{$>>>$}This number is great, thank you\\
+\phantom{$>>>$}This number is too small}
+\end{myindentpar}
+
+\newpage
+
+\noindent \texttt{elif statements}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+The elif statements allow you to split lists into many arrays according to specific conditions and perform separate code on all of them.\\
+E.g.\\
+\texttt{{\color{orange}if} x[0]=='B':\\
+\phantom{tab}{\color{purple}print} "The first letter of your name is B"\\
+{\color{orange}elif} len(x)<3:\\
+\phantom{tab}{\color{purple}print} "You have a very short name"\\
+{\color{orange}elif} x[(len(x)-1):]=='a':\\
+\phantom{tab}{\color{purple}print} "You are probably a female, as your name ends in a"\\
+{\color{orange}else}:\\
+\phantom{tab}{\color{purple}print} "I don't know anything about your name"}\\
+The following are examples for the x variable and the scripts output.\\
+\texttt{x=Alicia}\\
+\textbf{$>>>$You are probably a female as your name ends in a}\\
+\texttt{x=Bob}\\
+\textbf{$>>>$The first letter of your name is B}\\
+\texttt{x=Jean}\\
+\textbf{$>>>$I don't know anything about your name}\\
+\texttt{x=Ma}\\
+\textbf{$>>>$You have a very short name}
+\end{myindentpar}
+
+\section*{\underline{While Loops}}
+\noindent \texttt{while expression, then statement}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+In while loops, the expression can be any condition you set. Any variable that meets these will then cause the while loop to produce a statement. You can use the function 'counter' to then make the while expression loop until conditions are not fulfilled.\\
+E.g. \texttt{counter=0\\
+{\color{orange}while} counter<5 :\\
+\phantom{tab}{color{purple}print} 'The count is', counter\\
+\phantom{tab}counter=counter+1 }\\
+\textbf{$>>>$The count is 0\\
+\phantom{$>>>$}The count is 1\\
+\phantom{$>>>$}The count is 2\\
+\phantom{$>>>$}The count is 3\\
+\phantom{$>>>$}The count is 4}
+\end{myindentpar}
+
+\section*{\underline{Matrix and vector manipulation}  - ({\color{red}For use with pylab})}
+To see how to create a matrix or a vector, look at the section '\hyperlink{arrays}{arrays}'.
+
+\begin{longtable}{l p{11cm}}
+\texttt{+}&Add – adding two vectors or matrices together\\[1ex]
+\texttt{-}& Minus – subtracting two vectors or matrices together
+\end{longtable}
+
+\newpage
+
+\noindent \texttt{dot(x, y)}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+Gives the dot product of two vectors x and y.\\
+E.g. \texttt{x=array([1, 2, 3])\\
+y=array([2, 3, 4])\\
+z=dot(x, y)\\
+{\color{purple}print} z}\\
+\textbf{$>>>$20}
+\end{myindentpar}
+
+\noindent \texttt{X * Y}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+X * Y will matrix multiply two matrices X and Y together, only if they have the same shape. If not use the \texttt{dot} function example above.\\
+E.g. \texttt{x=array(((2, 3), (4, 5)))\\
+y=array(((1, 2), (5, -1)))\\
+z=x*y\\
+{\color{purple}print} z}\\
+\textbf{$>>>$[[2, 6],\\ 
+\phantom{$>>>$[}[20, -5]]}
+\end{myindentpar}
+
+\noindent \texttt{cross(x, y)}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+Tells us the cross product of x and y.\\
+E.g. \texttt{x=array([0, 0, 1])\\
+y=array([0, 1, 0])\\
+a=cross(x, y)\\
+{\color{purple}print} a}\\
+\textbf{$>>>$[-1, 0, 0]}\\
+\texttt{b=cross(y, x)\\
+{\color{purple}print} b}\\
+\textbf{$>>>$[1, 0, 0]}
+\end{myindentpar}
+
+\section*{\underline{Statistical Functions}  - ({\color{red}For use with pylab})}
+
+\noindent \texttt{normpdf(x, mean, stdev)}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+This is the probability density function for a normal distribution, (Gaussian Distribution). x is a numeric array of any format with values to work with, the mean is the mean and the stdev is the standard deviation.
+E.g. \texttt{x=arrange(1,100)\\
+Gaussian=normpdf(x, 12, 3)}\\
+Will create a Gaussian distribution from 0 to 99 with mean 12 and standard deviation 3.
+\end{myindentpar}
+
+
+\noindent \texttt{Poisson.pmf(x,lambda)}
+\begin{myindentpar}{1.4cm}
+\vspace*{-1ex}
+{\color{red}Note:} Use {\color{orange}from} scipy.stats {\color{orange}import} poisson.\\
+This is the probability mass function (.pmf) for a Poisson distribution. X is a numeric array of any format with values to work with, and lambda is the mean.\\
+E.g. \texttt{x=arrange(1,100)\\
+Poisson=poisson.pmf(x, 12)}
+Will create a Poisson mass distribution from 0 to 99 with mean 12.
+\end{myindentpar}
+

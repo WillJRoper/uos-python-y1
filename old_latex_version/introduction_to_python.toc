@@ -1,0 +1,152 @@
+\contentsline {chapter}{\numberline {1}Introduction}{v}{chapter.1}
+\contentsline {chapter}{\numberline {2}Some Useful Terminology}{viii}{chapter.2}
+\contentsline {chapter}{\numberline {3}Jupyter: Quick reference}{1}{chapter.3}
+\contentsline {chapter}{\numberline {4}The Basics}{2}{chapter.4}
+\contentsline {section}{\numberline {4.1}Learning Outcomes}{2}{section.4.1}
+\contentsline {section}{\numberline {4.2}Preamble}{2}{section.4.2}
+\contentsline {section}{\numberline {4.3}Running \texttt {Python} on the University computers}{3}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Running \texttt {Anaconda} for the first time}{3}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Running \texttt {Anaconda} in subsequent sessions}{4}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Running Jupyter Notebook}{4}{subsection.4.3.3}
+\contentsline {section}{\numberline {4.4}Running \texttt {Python} on your own computer}{4}{section.4.4}
+\contentsline {section}{\numberline {4.5}``Hello World''}{8}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Saving and logging your work}{8}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}Infinite loops happen... and are very bad}{9}{subsection.4.5.2}
+\contentsline {section}{\numberline {4.6}Data types in \texttt {Python}}{9}{section.4.6}
+\contentsline {section}{\numberline {4.7}Simple calculations with \texttt {Python}}{10}{section.4.7}
+\contentsline {section}{\numberline {4.8}Using variables for simple maths operations}{13}{section.4.8}
+\contentsline {subsection}{\numberline {4.8.1}Test your understanding}{14}{subsection.4.8.1}
+\contentsline {section}{\numberline {4.9}Changing A Variable's Data Type}{14}{section.4.9}
+\contentsline {section}{\numberline {4.10}Commenting}{16}{section.4.10}
+\contentsline {section}{\numberline {4.11}Testing the type of a variable}{16}{section.4.11}
+\contentsline {section}{\numberline {4.12}A note on the horrors of the insert key}{17}{section.4.12}
+\contentsline {section}{\numberline {4.13}Integrated Development Environments}{18}{section.4.13}
+\contentsline {chapter}{\numberline {5}Strings, Booleans, Tuples and Lists}{20}{chapter.5}
+\contentsline {section}{\numberline {5.1}Learning Outcomes}{20}{section.5.1}
+\contentsline {section}{\numberline {5.2}Preamble}{20}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}A reminder about collusion and plagiarism}{20}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Sourcing Help}{20}{subsection.5.2.2}
+\contentsline {section}{\numberline {5.3}String manipulations}{21}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Exercises}{22}{subsection.5.3.1}
+\contentsline {subsubsection}{Exercises (with solutions at the end of the chapter)}{22}{subsection.5.3.1}
+\contentsline {subsubsection}{Exercises (other)}{22}{Item.42}
+\contentsline {section}{\numberline {5.4}Boolean Variables}{23}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Exercises}{24}{subsection.5.4.1}
+\contentsline {section}{\numberline {5.5}Tuples \& Lists}{24}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Tuples}{25}{subsection.5.5.1}
+\contentsline {subsection}{\numberline {5.5.2}Lists}{27}{subsection.5.5.2}
+\contentsline {subsection}{\numberline {5.5.3}The \texttt {is} Keyword}{29}{subsection.5.5.3}
+\contentsline {subsection}{\numberline {5.5.4}Exercises}{30}{subsection.5.5.4}
+\contentsline {section}{\numberline {5.6}Input function}{31}{section.5.6}
+\contentsline {subsection}{\numberline {5.6.1}Issues with \texttt {jupyter}}{31}{subsection.5.6.1}
+\contentsline {subsection}{\numberline {5.6.2}Exercises}{32}{subsection.5.6.2}
+\contentsline {section}{\numberline {5.7}Signpost}{32}{section.5.7}
+\contentsline {section}{\numberline {5.8}Advanced Exercises - Some independent learning may be required}{33}{section.5.8}
+\contentsline {section}{\numberline {5.9}Worked Solutions for Section \ref {Strings}}{34}{section.5.9}
+\contentsline {chapter}{\numberline {6}Conditionals, Loops and Functions}{35}{chapter.6}
+\contentsline {section}{\numberline {6.1}Learning Outcomes}{35}{section.6.1}
+\contentsline {section}{\numberline {6.2}Colons and Indentation}{35}{section.6.2}
+\contentsline {section}{\numberline {6.3}The if statement}{37}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Exercises}{41}{subsection.6.3.1}
+\contentsline {subsubsection}{Exercises (with worked answers)}{41}{subsection.6.3.1}
+\contentsline {subsubsection}{Exercises (other)}{42}{Item.96}
+\contentsline {section}{\numberline {6.4}While Loops}{42}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Exercises}{44}{subsection.6.4.1}
+\contentsline {section}{\numberline {6.5}For Loops}{45}{section.6.5}
+\contentsline {section}{\numberline {6.6}Format strings}{46}{section.6.6}
+\contentsline {section}{\numberline {6.7}Range command}{47}{section.6.7}
+\contentsline {subsection}{\numberline {6.7.1}Using the separator command}{48}{subsection.6.7.1}
+\contentsline {subsection}{\numberline {6.7.2}Exercises}{48}{subsection.6.7.2}
+\contentsline {subsubsection}{Exercises (with worked answers)}{48}{subsection.6.7.2}
+\contentsline {subsubsection}{Exercises (other)}{49}{Item.104}
+\contentsline {section}{\numberline {6.8}Functions}{49}{section.6.8}
+\contentsline {subsection}{\numberline {6.8.1}Exercises}{51}{subsection.6.8.1}
+\contentsline {section}{\numberline {6.9}Signpost}{52}{section.6.9}
+\contentsline {section}{\numberline {6.10}Lambda statement}{52}{section.6.10}
+\contentsline {section}{\numberline {6.11}Dictionaries}{52}{section.6.11}
+\contentsline {subsection}{\numberline {6.11.1}A Note On Iterators}{56}{subsection.6.11.1}
+\contentsline {section}{\numberline {6.12}Advanced Exercises}{56}{section.6.12}
+\contentsline {section}{\numberline {6.13}Worked Examples}{57}{section.6.13}
+\contentsline {chapter}{\numberline {7}Python Modules and an Introduction to Plotting}{59}{chapter.7}
+\contentsline {section}{\numberline {7.1}Learning Outcomes}{59}{section.7.1}
+\contentsline {section}{\numberline {7.2}What are modules?}{59}{section.7.2}
+\contentsline {section}{\numberline {7.3}Common Python modules}{60}{section.7.3}
+\contentsline {section}{\numberline {7.4}Importing Modules}{61}{section.7.4}
+\contentsline {subsection}{\numberline {7.4.1}Method One}{62}{subsection.7.4.1}
+\contentsline {subsection}{\numberline {7.4.2}Method Two}{62}{subsection.7.4.2}
+\contentsline {subsection}{\numberline {7.4.3}Method Three}{62}{subsection.7.4.3}
+\contentsline {subsection}{\numberline {7.4.4}Method Four}{63}{subsection.7.4.4}
+\contentsline {section}{\numberline {7.5}Accessing help with modules and functions}{64}{section.7.5}
+\contentsline {subsection}{\numberline {7.5.1}The {\tt dir} command}{64}{subsection.7.5.1}
+\contentsline {subsection}{\numberline {7.5.2}The {\tt help} command}{64}{subsection.7.5.2}
+\contentsline {subsubsection}{When {\tt help()} is not actually helpful}{65}{lstnumber.-236.4}
+\contentsline {subsection}{\numberline {7.5.3}Exercises}{65}{subsection.7.5.3}
+\contentsline {subsubsection}{Exercises (with worked solutions)}{65}{subsection.7.5.3}
+\contentsline {subsubsection}{Exercises (other)}{65}{Item.125}
+\contentsline {section}{\numberline {7.6}The {\tt random} module}{66}{section.7.6}
+\contentsline {subsection}{\numberline {7.6.1}Exercises}{66}{subsection.7.6.1}
+\contentsline {subsubsection}{Exercises (with worked solutions)}{66}{subsection.7.6.1}
+\contentsline {subsubsection}{Exercises (other)}{66}{Item.134}
+\contentsline {subsection}{\numberline {7.6.2}Seeding}{67}{subsection.7.6.2}
+\contentsline {section}{\numberline {7.7}The {\tt arange} command}{67}{section.7.7}
+\contentsline {section}{\numberline {7.8}The \texttt {matplotlib.pyplot.plot} function}{68}{section.7.8}
+\contentsline {subsection}{\numberline {7.8.1}Exercises}{71}{subsection.7.8.1}
+\contentsline {section}{\numberline {7.9}Plotting in multiple figures}{72}{section.7.9}
+\contentsline {section}{\numberline {7.10}Plotting a Scatter with \texttt {plt.scatter}}{73}{section.7.10}
+\contentsline {subsection}{\numberline {7.10.1}Exercises}{74}{subsection.7.10.1}
+\contentsline {section}{\numberline {7.11}Signpost}{74}{section.7.11}
+\contentsline {section}{\numberline {7.12}Advanced Exercises}{75}{section.7.12}
+\contentsline {section}{\numberline {7.13}Worked Examples}{75}{section.7.13}
+\contentsline {chapter}{\numberline {8}Introduction to Data and Pandas}{77}{chapter.8}
+\contentsline {section}{\numberline {8.1}Learning Outcomes}{77}{section.8.1}
+\contentsline {section}{\numberline {8.2}Loading CSV files}{77}{section.8.2}
+\contentsline {subsection}{\numberline {8.2.1}Specifying Directories}{78}{subsection.8.2.1}
+\contentsline {subsection}{\numberline {8.2.2}The \texttt {csv} Module}{78}{subsection.8.2.2}
+\contentsline {subsubsection}{Variable Names}{80}{table.caption.25}
+\contentsline {subsection}{\numberline {8.2.3}The \texttt {pandas} Module}{81}{subsection.8.2.3}
+\contentsline {subsubsection}{Saving your DataFrame}{85}{lstnumber.-283.11}
+\contentsline {subsection}{\numberline {8.2.4}Exercises}{85}{subsection.8.2.4}
+\contentsline {section}{\numberline {8.3}Plotting data points and error bars}{86}{section.8.3}
+\contentsline {subsection}{\numberline {8.3.1}Data points}{86}{subsection.8.3.1}
+\contentsline {subsection}{\numberline {8.3.2}Plotting error bars}{87}{subsection.8.3.2}
+\contentsline {subsubsection}{Exercises (with worked answers)}{89}{figure.caption.32}
+\contentsline {subsubsection}{Exercises (other)}{90}{Item.162}
+\contentsline {section}{\numberline {8.4}Fitting straight lines to data points}{91}{section.8.4}
+\contentsline {subsection}{\numberline {8.4.1}Exercises}{92}{subsection.8.4.1}
+\contentsline {section}{\numberline {8.5}Answers to Exercises from Sec\nobreakspace {}\ref {errorbar}}{93}{section.8.5}
+\contentsline {chapter}{\numberline {9}Numpy and Arrays}{95}{chapter.9}
+\contentsline {section}{\numberline {9.1}Learning Outcomes}{95}{section.9.1}
+\contentsline {section}{\numberline {9.2}What is \texttt {numpy}?}{95}{section.9.2}
+\contentsline {section}{\numberline {9.3}Array creation}{97}{section.9.3}
+\contentsline {section}{\numberline {9.4}Computations with Arrays}{99}{section.9.4}
+\contentsline {subsection}{\numberline {9.4.1}Exercises (with worked solutions)}{101}{subsection.9.4.1}
+\contentsline {subsection}{\numberline {9.4.2}Broadcasting}{101}{subsection.9.4.2}
+\contentsline {subsection}{\numberline {9.4.3}Extraction and Shape/Dimension Manipulations}{102}{subsection.9.4.3}
+\contentsline {section}{\numberline {9.5}Using \texttt {numpy}'s Random Functions}{104}{section.9.5}
+\contentsline {subsection}{\numberline {9.5.1}Exercises}{104}{subsection.9.5.1}
+\contentsline {subsubsection}{Exercises (with worked solutions)}{104}{subsection.9.5.1}
+\contentsline {subsubsection}{Advanced Exercises}{104}{Item.180}
+\contentsline {section}{\numberline {9.6}Treating Arrays as Matrices}{105}{section.9.6}
+\contentsline {section}{\numberline {9.7}The \texttt {Where} Function}{106}{section.9.7}
+\contentsline {subsection}{\numberline {9.7.1}Exercises (with worked solutions)}{107}{subsection.9.7.1}
+\contentsline {subsection}{\numberline {9.7.2}Advanced Exercises}{107}{subsection.9.7.2}
+\contentsline {section}{\numberline {9.8}Optimisation with \texttt {numpy}}{108}{section.9.8}
+\contentsline {section}{\numberline {9.9}Worked Solutions}{109}{section.9.9}
+\contentsline {chapter}{\numberline {10}Scientific Python}{111}{chapter.10}
+\contentsline {section}{\numberline {10.1}Learning Outcomes}{111}{section.10.1}
+\contentsline {section}{\numberline {10.2}Opening Different File Types}{111}{section.10.2}
+\contentsline {subsection}{\numberline {10.2.1}\texttt {with} and the importance of closing files}{112}{subsection.10.2.1}
+\contentsline {subsection}{\numberline {10.2.2}Text and binary files}{113}{subsection.10.2.2}
+\contentsline {subsection}{\numberline {10.2.3}Pickle files}{113}{subsection.10.2.3}
+\contentsline {subsection}{\numberline {10.2.4}\texttt {Numpy} files}{114}{subsection.10.2.4}
+\contentsline {subsection}{\numberline {10.2.5}FITS files}{114}{subsection.10.2.5}
+\contentsline {subsection}{\numberline {10.2.6}HDF5 files}{115}{subsection.10.2.6}
+\contentsline {section}{\numberline {10.3}Treating Images As Arrays}{116}{section.10.3}
+\contentsline {subsection}{\numberline {10.3.1}Producing images}{116}{subsection.10.3.1}
+\contentsline {subsection}{\numberline {10.3.2}Manipulating images}{119}{subsection.10.3.2}
+\contentsline {subsection}{\numberline {10.3.3}Exercises (with worked solutions)}{122}{subsection.10.3.3}
+\contentsline {section}{\numberline {10.4}Histograms}{123}{section.10.4}
+\contentsline {section}{\numberline {10.5}Basic Curve Fitting}{126}{section.10.5}
+\contentsline {section}{\numberline {10.6}Integration}{128}{section.10.6}
+\contentsline {subsection}{\numberline {10.6.1}Exercises (with worked solutions)}{129}{subsection.10.6.1}
+\contentsline {section}{\numberline {10.7}Worked Solutions}{130}{section.10.7}

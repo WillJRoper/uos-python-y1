@@ -1,0 +1,288 @@
+\usepackage{geometry} 
+\usepackage{imakeidx}
+ \geometry{
+ a4paper,
+ left=25mm,
+ top=25mm,
+ right=25mm,
+ bottom=25mm
+ }               						
+\geometry{letterpaper}                   		
+\usepackage{graphicx}
+\usepackage{comment}				
+\usepackage{amsmath}						
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage[defaultlines=3, all]{nowidow}
+\usepackage{courier}
+\usepackage{float}
+\usepackage{cite}
+\usepackage{booktabs}
+\usepackage{subcaption}
+\usepackage{rotating}
+\usepackage{fancyhdr}
+\usepackage{slashed}
+\usepackage{rotating}
+\usepackage{hyperref}
+\usepackage{tcolorbox}
+\usepackage{titlesec}
+\usepackage{menukeys}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{arrows}
+ 
+\titleformat{\chapter}[display]
+  {\normalfont\bfseries}{\Huge Chapter \thechapter}{0pt}{\Huge}
+
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{1, 1, 1} %{0.95,0.95,0.92}
+\definecolor{orange}{RGB}{255,127,0}
+\definecolor{purple}{RGB}{144,0,144}
+\definecolor{grey}{RGB}{235,235,235}
+\definecolor{mygrey}{RGB}{235,235,255}
+\definecolor{myblue}{RGB}{0,102,255}
+\definecolor{myred}{RGB}{221,50,50}
+\definecolor{mygreen}{RGB}{0,170,0}
+\definecolor{myGrey}{RGB}{169,169,169}
+\definecolor{myblack}{RGB}{0,0,0}
+\definecolor{paleblue}{RGB}{158,214,255}
+\definecolor{paleyellow}{RGB}{255,216,0}
+
+\newcommand*{\pybullet}{
+	\item[{\includegraphics[width=0.3cm]{Pictures/pythonsym.png}}]}
+
+% Author Identifications
+\newcommand{\will}[1]{{\color{purple}{#1}}}
+\newcommand{\reese}[1]{{\color{red}{#1}}}
+\newcommand{\david}[1]{{\color{magenta}{#1}}}
+\newcommand{\aran}[1]{{\color{blue}{#1}}}
+
+\makeatletter
+\newcommand{\chapterauthor}[1]{%
+  {\parindent0pt\vspace*{-25pt}%
+  \linespread{1.1}\large\scshape#1%
+  \par\nobreak\vspace*{35pt}}
+  \@afterheading%
+}
+\makeatother
+% Header and Footer formatting
+\pagestyle{fancy}
+% Added by David to remove the Chapter N. that was present in the headers
+\renewcommand{\chaptermark}[1]{\markboth{\space#1}{}}
+\fancyhf{}
+% Added by David to include author last names
+% \fancyhead[l]{Roper, Wilkinson, Turner, Hubbard, Romer, Loveday} 
+\fancyhead[l]{PIP Python Lab Book} 
+\fancyfoot[c]{\thepage}
+
+\tikzset{
+startend/.style = {draw,fill=red, circle},
+operation/.style = {rectangle, draw,fill=paleblue,line width=0.04cm, text width=3.5em, text centered, minimum height=2.5em,rounded corners},
+question/.style = {diamond, draw,fill=paleyellow,line width=0.04cm, minimum height=1em, minimum width=8em, text width=7em, text centered, inner sep=0pt},
+line/.style = {draw,line width=0.05cm,rounded corners, -latex'},
+coord/.style={coordinate}
+}
+
+\newcommand{\lfill}{\underline{\hspace*{0.8cm}}}
+\newcommand{\linespan}{\begin{center}\rule{14cm}{0.4pt}\end{center}}
+
+% Automatic centering of all figures
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+
+% Code listing environments
+\lstdefinestyle{mystyle}{
+    language=C++,
+    backgroundcolor=\color{grey},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+% What follows here is a python language definition I found on stackoverflow and have been adapting (will)
+\usepackage{xcolor}
+\definecolor{maroon}{cmyk}{0, 0.87, 0.68, 0.32}
+\definecolor{halfgray}{gray}{0.55}
+\definecolor{ipython_frame}{RGB}{207, 207, 207}
+\definecolor{ipython_bg}{RGB}{247, 247, 247}
+\definecolor{ipython_red}{RGB}{186, 33, 33}
+\definecolor{ipython_green}{RGB}{0, 128, 0}
+\definecolor{ipython_lightgreen}{RGB}{0, 220, 0}
+\definecolor{ipython_cyan}{RGB}{64, 128, 128}
+\definecolor{ipython_purple}{RGB}{170, 34, 255}
+
+\lstset{
+    breaklines=true,
+    %
+    extendedchars=true,
+    literate=
+    {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+    {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+    {à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1
+    {À}{{\`A}}1 {È}{{\'E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1
+    {ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
+    {Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
+    {â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
+    {Â}{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
+    {œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1 {ß}{{\ss}}1
+    {ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
+    {€}{{\EUR}}1 {£}{{\pounds}}1
+}
+
+%%
+%% Python definition (c) 1998 Michael Weber
+%% Additional definitions (2013) Alexis Dimitriadis
+%% modified by me (should not have empty lines)
+%%
+\lstdefinelanguage{iPython}{
+    morekeywords={access,and,break,class,continue,def,del,elif,else,except,exec,finally,for,from,global,if,import,in,is,lambda,not,or,pass,print,raise,return,try,while},%
+    %
+    % Built-ins
+    morekeywords=[2]{abs,all,any,basestring,bin,bool,bytearray,callable,chr,classmethod,cmp,compile,complex,delattr,dict,dir,divmod,enumerate,eval,execfile,file,filter,float,format,frozenset,getattr,globals,hasattr,hash,help,hex,id,input,int,isinstance,issubclass,iter,len,list,locals,long,map,max,memoryview,min,next,object,oct,open,ord,pow,property,range,raw_input,reduce,reload,repr,reversed,round,set,setattr,slice,sorted,staticmethod,str,sum,super,tuple,type,unichr,unicode,vars,xrange,zip,apply,buffer,coerce,intern},%
+    %
+    sensitive=true,%
+    morecomment=[l]\#,%
+    morestring=[b]',%
+    morestring=[b]",%
+    %
+    morestring=[s]{'''}{'''},% used for documentation text (mulitiline strings)
+    morestring=[s]{"""}{"""},% added by Philipp Matthias Hahn
+    %
+    morestring=[s]{r'}{'},% `raw' strings
+    morestring=[s]{r"}{"},%
+    morestring=[s]{r'''}{'''},%
+    morestring=[s]{r"""}{"""},%
+    morestring=[s]{u'}{'},% unicode strings
+    morestring=[s]{u"}{"},%
+    morestring=[s]{u'''}{'''},%
+    morestring=[s]{u"""}{"""},%
+    %
+    % {replace}{replacement}{lenght of replace}
+    % *{-}{-}{1} will not replace in comments and so on
+    literate=
+    {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+    {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+    {à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1
+    {À}{{\`A}}1 {È}{{\'E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1
+    {ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
+    {Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
+    {â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
+    {Â}{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
+    {œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1 {ß}{{\ss}}1
+    {ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
+    {€}{{\EUR}}1 {£}{{\pounds}}1,
+    %
+    literate=
+    *{-}{{{\color{ipython_purple}$-$}}}1
+     {?}{{{\color{ipython_purple}?}}}1
+     {^}{{{\color{ipython_purple}\^{}}}}1
+     {=}{{{\color{ipython_purple}\texttt{\textbf{=}}}}}1
+     {+}{{{\color{ipython_purple}$+$}}}1
+     {*}{{{\color{ipython_purple}$\ast$}}}1
+     {/}{{{\color{ipython_purple}$/$}}}1
+     {+=}{{{\color{ipython_purple}+\texttt{\textbf{=}}}}}1
+     {-=}{{{\color{ipython_purple}-\texttt{\textbf{=}}}}}1
+     {*=}{{{\color{ipython_purple}$\ast$\texttt{\textbf{=}}}}}1
+     {/=}{{{\color{ipython_purple}/\texttt{\textbf{=}}}}}1
+     {>}{{{\color{ipython_purple}$\boldsymbol{>}$}}}1
+     {<}{{{\color{ipython_purple}$\boldsymbol{<}$}}}1
+     { == }{{{\color{ipython_purple}~\texttt{\textbf{=}}\,\texttt{\textbf{=}}~}}}4
+     { <= }{{{\color{ipython_purple}~$\boldsymbol{<}$\,\texttt{\textbf{=}}~}}}4
+     { >= }{{{\color{ipython_purple}~$\boldsymbol{>}$\,\texttt{\textbf{=}}~}}}4
+    %  {0}{{\color{ipython_green}{0\color{black}}}}1
+    %  {1}{{\color{ipython_green}{1\color{black}}}}1
+    %  {2}{{\color{ipython_green}{2\color{black}}}}1
+    %  {3}{{\color{ipython_green}{3\color{black}}}}1
+    %  {4}{{\color{ipython_green}{4\color{black}}}}1
+    %  {5}{{\color{ipython_green}{5\color{black}}}}1
+    %  {6}{{\color{ipython_green}{6\color{black}}}}1
+    %  {7}{{\color{ipython_green}{7\color{black}}}}1
+    %  {8}{{\color{ipython_green}{8\color{black}}}}1
+    %  {9}{{\color{ipython_green}{9\color{black}}}}1
+    %  {.0}{{\color{ipython_green}{.0\color{black}}}}1
+     {-1}{{\color{black}{-1}}}1
+     {-2}{{\color{black}{-2}}}1
+     {-3}{{\color{black}{-3}}}1
+     {-4}{{\color{black}{-4}}}1
+     {-5}{{\color{black}{-5}}}1
+     {-6}{{\color{black}{-6}}}1
+     {-7}{{\color{black}{-7}}}1
+     {-8}{{\color{black}{-8}}}1
+     {-9}{{\color{black}{-9}}}1
+    %  {j}{{\color{ipython_green}\textbf{j}}}1
+    %  {)}{{\color{ipython_lightgreen}{)}}}1 
+    %  {(}{{\color{ipython_lightgreen}{(}}}1
+    %  {]}{{\color{ipython_lightgreen}{]}}}1 
+    %  {[}{{\color{ipython_lightgreen}{[}}}1
+    ,
+    %
+    identifierstyle=\color{black}\ttfamily,
+    commentstyle=\color{ipython_cyan}\ttfamily,
+    stringstyle=\color{ipython_red}\ttfamily,
+    keepspaces=true,
+    showspaces=false,
+    showstringspaces=false,
+    %
+    rulecolor=\color{ipython_frame},
+    frame=single,
+    frameround={t}{t}{t}{t},
+    %framexleftmargin=6mm,
+    %numbers=left,
+    %numberstyle=\scriptsize\color{halfgray},
+    %
+    %
+    backgroundcolor=\color{ipython_bg},
+    %   extendedchars=true,
+    basicstyle=\footnotesize\color{black},
+    keywordstyle=\color{ipython_green}\ttfamily,
+}
+
+\lstdefinestyle{PY}{
+    language=iPython,
+    backgroundcolor=\color{grey},
+    keywordstyle=\bfseries\color{ipython_green},
+    commentstyle=\bfseries\color{myGrey},
+    identifierstyle=\color{myblack},
+    stringstyle=\bfseries\color{myred},
+    emph={int,bool,type,None,len,range,input,1,2,3,4,5,6,7,8,9},
+    emphstyle=\color{ipython_green}\textbf,
+    showstringspaces=false,
+    rulecolor=\color{black},
+    breaklines=true,
+    postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space}
+}
+%added by Reese to prevent syntax highlighting in jupyter outputs
+\lstdefinestyle{PY_out}{
+    language=iPython,
+    backgroundcolor=\color{white},
+    keywordstyle=\color{myblack},
+    commentstyle=\color{myblack},
+    identifierstyle=\color{myblack},
+    stringstyle=\color{myblack},
+    emph={int,bool,type,None,len,range,input,1,2,3,4,5,6,7,8,9},
+    emphstyle=\color{myblack},
+    showstringspaces=false,
+    rulecolor=\color{black},
+    breaklines=true,
+    postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space}
+}

@@ -1,0 +1,345 @@
+\section{Making C++ files and compilation}
+The first thing you will notice about C/C++ is that you can't simply run the files that you write.
+You'll need to compile the text file you write (this generates an executable) and then you can run the executable.
+Before all of this we need to check that there is a compiler installed on your computer. 
+You can do this by typing the following command into your terminal.
+
+\lstset{style=mystyle}
+\begin{lstlisting}{language=shell}
+$ which g++
+\end{lstlisting}
+If you get a line back that looks like this
+\begin{lstlisting}{language=shell}
+/usr/bin/g++
+\end{lstlisting}
+Then you have the \texttt{g++} compiler installed. If not, install it.
+A quick google search will tell you exactly how to do this.
+
+Now that we have the compiler working we can write our first \texttt{C++} program.
+In the terminal make a new directory and navigate into it.
+For example:
+\begin{lstlisting}{language=shell}
+$ cd Desktop/
+$ mkdir IntroToCPP
+$ cd IntroToCPP/
+\end{lstlisting}
+To create a new \texttt{.cxx} file we can use the \texttt{touch} command in linux as follows.
+\begin{lstlisting}{language=shell}
+$ touch first.cxx
+\end{lstlisting}
+Now you can open \texttt{first.cxx} with your preferred text editor.
+Once you have opened it you can write the following code.
+\lstset{style=mystyle}
+\begin{lstlisting}
+int main() {
+	return 0;
+}
+\end{lstlisting}
+Before we compile this there are some important things to take note of. 
+Firstly, this is a function and it is specifically called "'main".
+In \texttt{C++} you have to have a main function for the code to work.
+Secondly, there is a semi-colon at the end of the line of code.
+\texttt{C++} does not see new lines, therefore you have to physically denote them with semi-colons.
+The third feature is that the contents of the function is surrounded by curly braces. 
+Instead of indentation \texttt{C++} requires the active portion of any function to be in curly braces.
+Lastly, every function in \texttt{C++} as to return something, in this case we are returning the value zero.
+
+Now we can compile out first \texttt{C++} program.
+To do so go into your terminal and enter the following command.
+\begin{lstlisting}{language=shell}
+$ g++ first.cxx -o first
+\end{lstlisting}
+What we are going here is telling the \texttt{g++} compiler to compile out \texttt{.cxx} file.
+Giving the input flag \texttt{-o} tells \texttt{g++} that the word that comes next is the name we want to give the executable we're about to make.  
+If you hit enter, hopefully you don't get any compilation errors. 
+In order to run the executable you've just made you enter the following.
+\begin{lstlisting}{language=shell}
+$ ./first
+\end{lstlisting}
+Hit enter and nothing should happen, however this is because we've not told the program to do anything, just yet that is.
+
+\section{Data types and modules}
+\texttt{C++} is what is referred to as a strongly typed language. 
+What this means is that you have to define the type of your variables before you can do anything with them.
+Furthermore, you cannot perform operations on variables if they have different types, unless you change their type before doing what you're trying to do.
+Some examples of data types are
+\begin{itemize}
+\item int: for integers,
+\item float: floating point numbers,
+\item double: similar to a float, but with more decimal places,
+\item long: similar to and int, but longer,
+\item bool: for storing boolean variables (true, false),
+\item there are many, many more.
+\end{itemize}
+
+Another feature of \texttt{C++}  is that it is, by construction, a very modular language.
+For \texttt{C++} there are numerous libraries, with even more numerous modules, all containing their own data types and interesting functions.
+Within the context of this document we will mainly consider the \texttt{C++} standard library, within which you can find things like vectors, strings, mathematical operators and many more. 
+In order to include any of these modules in the code you write - for example, if I want to use the vector module - you will need to put something like
+\begin{lstlisting}{style=mystyle}
+#include <vector>
+\end{lstlisting}
+at the top of your script.
+We will discuss vectors and other features of the \texttt{C++}  standard library later in this document.
+
+\section{Terminal inputs and outputs}
+A common part of any piece of code is printing information to the terminal window.
+This is handled by a module in the \texttt{C++} standard library, called the input output stream.
+With this we can now write out first \texttt{C++} script that actually does something.
+In a \texttt{.cxx} file you can write the following code 
+\lstset{style=mystyle}
+\begin{lstlisting}
+#include <iostream>
+
+int main() {
+	std::cout << "Hello, world" << std::endl;
+	return 0;
+}
+\end{lstlisting}
+So, what have we done here?
+First we included the input output stream, allowing us to be able to use it.
+Then we called the function \texttt{cout} which means console output (the equivalent of \texttt{print()} in Python). 
+This is preceded by \texttt{std::}. 
+\texttt{std} is what is called a namespace, so what this means is from the standard library get this function. 
+It is left to the student to research namespaces, however for this course we are going to focus on the standard library, and so we will only be using \texttt{std::}.   
+At the end of the line we are using \texttt{std::endl} which is telling the computer to start a new line at the end of the print statement. 
+
+Compile this as you did before and you should get the following output.
+\begin{lstlisting}{language=shell}
+$ g++ first.cxx -o first
+$ ./first
+Hello, world!
+$
+\end{lstlisting}
+Congratulations! 
+You've just made your first piece of \texttt{C++} code that actually does something.
+
+Another interesting feature you can add to your code is the ability to enter things into it from the terminal while it is running.
+For this we must use the console input command.
+As an example, we are going to build a piece of code that takes in one integer and returns double that integer.
+To do this we are going to have to use what we know about console outputs, variable definitions and console inputs.
+The code will look as follows.
+\begin{lstlisting}{style=mystyle}
+#include <iostream>
+
+int main() {
+  int number;
+  std::cout << "Please enter a number: ";
+  std::cin >> number;
+  std::cout << std::endl;
+  
+  std::cout << "Twice number you entered was: " << 2 * number << std::endl;
+  return 0;
+}
+\end{lstlisting}
+So, what have we done here?
+We have to define a variable, in this case called "\texttt{number}", and we define it to be an integer.
+The next line is a console output statement as you have seen before.
+Now, using \texttt{std::cin} we can perform a console input. 
+What this line means is: "whatever is written into the terminal, funnel that value into the variable 'number'".
+It is very important here to notice the direction of the double chevrons!
+At the end we are printing a short string, followed by our input number multiplied by two.
+Try to compile this and run it. 
+Notice what happens if you don't enter an integer into the terminal when it asks you to. \\
+\\
+\noindent Question: what does the computer think you're giving it if you enter a word or a non-integer value when it asks for an integer?
+
+\section{Conditional statements}
+One of the most important features of a piece of code is for it to be able to branch in one direction or another depending on a certain condition.
+This allows for the user to as a question and for the computer to respond depending on what it does or doesn't want to see.
+The type of function we are describing now is the \texttt{if} funciton.
+Similarly to Python, \texttt{if} statements require one or more argument that has to be satisfied in order to execute what is within the function.
+This would look as follows.
+\begin{lstlisting}{style=mystyle}
+if (my_condition) {
+	perform_this_action;
+}
+\end{lstlisting}
+Let's illustrate the use of this function with some example code.
+Suppose we want the computer to tell us if a number we enter into the terminal is a multiple of 7.
+You can have a go at this yourself or follow the script below.
+\begin{lstlisting}{style=mystyle}
+#include <iostream>
+
+int main() {
+  
+  int number;
+  std::cout << "Please enter a number: ";
+  std::cin >> number;
+  std::cout << std::endl;
+  
+  if (number%7 == 0) {
+    std::cout << number << " is a multiple of 7" << std::endl;
+  }
+  else {
+    std::cout << number << " is not a multiple of 7" << std::endl;
+  }
+  return 0;
+}
+\end{lstlisting}
+This should appear to be similar to what you have seen before.
+The only change is the \texttt{if} statement at the end.
+What we are asking there is: "if the number we input modulus 7 is equal to zero print a positive output statement. Otherwise (else) print the negative output statement".
+
+Another example of this kind of technique comes in the form of a \texttt{switch} statement.
+These are similar to the functional form of an \texttt{if} statement, however the internal definitions are very different.
+Suppose now we want to see if an inputted number is odd or even.
+We can do this with a switch statement as follows.
+\begin{lstlisting}{style=mystyle}
+#include <iostream>
+
+int main() {
+  
+  int number;
+  std::cout << "Please enter a number: ";
+  std::cin >> number;
+  std::cout << std::endl;
+  
+  switch(number%2) {
+    case 0:
+      std::cout << "Even" << std::endl;
+      break;
+    case 1:
+      std::cout << "Odd" << std::endl;
+      break;
+  }
+  return 0;
+}
+\end{lstlisting}
+There are numerous uses for \texttt{switch} statements as they have versatilities you don't get so conveniently with if statements. 
+One we will go over later is using them for declaration of input flags, a very useful tool to use when you don't want to compile your files over and over again.
+
+\section{Loops}
+As in Python, loops are very useful when you want to perform an action many times over some value of iterations.
+This type of practicality is most easily realised in the form of a \texttt{for} loop. 
+\texttt{while} loops also exist in \texttt{C++}, however they are syntactically the same as in Python.
+In \texttt{C++} you have to be very careful to define your loop accurately.
+The general form for a \texttt{for} loop is as follows.
+\begin{lstlisting}{style=mystyle}
+for (start point; end point; incitement) {
+
+}
+\end{lstlisting}
+One has to be careful to define the variable and the data type of the variable within the declaration of the loop.
+Below is an example of a loop that will print the numbers from 1 to 10.
+\begin{lstlisting}{style=mystyle}
+#include <iostream>
+
+int main() {
+  
+  for (int i=1; i<11; ++i) {
+    std::cout << i << std::endl;
+  }
+  
+  return 0;
+}
+\end{lstlisting}
+Notice here that I have declared the variable \texttt{i} is an integer running from 1 to 10.
+For convenience I have set the increment using \texttt{++i}.
+This is a short hand for "add one to the value of i".
+\\
+\noindent Challenge: write a program that prints all of the numbers between two user inputted numbers in one column, and whether it is a multiple of 3, 7, and both in a column next to it.
+\\
+\noindent Solution:
+\begin{lstlisting}{style=mystyle}
+#include <iostream>
+
+int main() {
+  
+  int number1;
+  int number2;
+  
+  std::cout << "Value for number 1: ";
+  std::cin  >> number1;
+  std::cout << "Value for number 2: ";
+  std::cin  >> number2;
+  
+  for (int i=number1; i<number2; ++i) {
+    std::cout << i << "\t";
+    if (i%3 == 0 && i%7 == 0) {
+      std::cout << "both" << std::endl;
+    }
+    else if (i%3 == 0 && i%7 != 0) {
+      std::cout << "only 3" << std::endl;
+    }
+    else if (i%3 != 0 && i%7 == 0) {
+      std::cout << "only 7" << std::endl;
+    }
+    else {
+      std::cout << "neither" << std::endl;
+    }
+  }
+  return 0;
+}
+\end{lstlisting}
+
+\section{Strings and chars}
+It is often nice to not only have numerical outputs and manipulation, but to also have words too.
+In \texttt{C++} there are two ways to achieve this: \texttt{string}, imported from the standard library, or the slightly more complicated \texttt{char}.
+
+First we will discuss the \texttt{string} module.
+As before we need to include it in in out code before we are able to use them.
+\begin{lstlisting}{style=mystyle}
+#include <string>
+\end{lstlisting}
+Now we will be able to define variables that store words!
+Using what you've learned already write a program that asks for the user's first name and responds with a friendly greeting.
+\\
+Solution:
+\begin{lstlisting}{style=mystyle}
+#include <iostream>
+#include <string>
+
+int main() {
+  
+  std::string name;
+  
+  std::cout << "What is your first name: ";
+  std::cin  >> name;
+  
+  std::cout << "Hello, " << name << std::endl;
+  return 0;
+  
+}
+\end{lstlisting}
+See what happens if you try and put more than one word in the user input.
+Why do you think this happens?
+When you define a \texttt{std::string} in the text, i.e.
+\begin{lstlisting}{style=mystyle}
+std::string FullName = "A. Kathy Romer";
+\end{lstlisting}
+it will see the blank spaces as part of the singular string because they are within the quotation marks.
+However, when you are using a command line input a blank space denotes the separation between two objects, whether that be numbers, strings or anything else.
+So, how do we get around this?
+Well, it's a bit complicated so it will be discussed more deeply further into this course, but the following code will allow for multiple words in the input.
+\begin{lstlisting}{style=mystyle}
+#include <iostream>
+
+int main() {
+  
+  char name[100];
+  
+  std::cout << "What is your name: ";
+  std::cin.getline(name, sizeof(name));
+  std::cout << "Hello, " << name << std::endl;
+  return 0;
+}
+\end{lstlisting}
+See, that's definitely more complicated.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Challenges}
