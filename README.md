@@ -30,6 +30,19 @@ Not everyone enjoys coding as much as we do, **so do not worry if you find yours
 
 Each notebook will begin with a list of learning outcomes for that section followed by the content containing some worked examples. At the end of each section, there will be some exercises for you to complete to check your understanding of the chapter (remember to ask the ATs for help if you're stuck, they will **likely** have made all the same mistakes).
 
+### Getting your own copy of the Notebooks
+
+To get your copy of the notebooks to work on and edit as much as you like:
+- Open a terminal. (On Mac this is called Terminal. On Windows the default is Powershell).
+- Navigate to the location you would like to have the Python directory (repo) with the `cd` command (change directory). On my machine, I would store this in `Documents/University/` so I'd enter: `cd Documents/University` but feel free to put this anywhere as long as you know where it is.
+- Now you can make a directory to hold your Python work. I'd call this `PIP-Python` so would run `mkdir PIP-Python` to make a new directory inside the `University` folder I moved to above. I'd then `cd PIP-Python` to get into that directory
+- Once you are where you want to store your Python work all you have to do is "clone" the repository to get all its contents locally. To do this run `git clone https://github.com/WillJRoper/uos-python-y1.git` to copy the repo to your machine.
+- You will now have a new directory called `uos-python-y1` inside this directory. Check by running `dir` on Windows or `ls` on Linux or Mac.
+
+You should now be able to see all the files that make up this course on your own computer. This is your copy so you can edit freely. One thing I would say is I recommend not adding files inside `uos-python-y1` instead add them to the outside directory. This will make life easier down the line. 
+
+Of course, I suspect all of the above is a very new concept to many, if not all, of you! Don't worry if you couldn't do the above. A copy of this repo is available on Canvas with up-to-date documents. I will go into detail about Git in due course.
+
 ## Assignments
 The three assignments (the first of which is unweighted and peer-marked) will be marked on:
 
