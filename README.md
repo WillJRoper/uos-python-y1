@@ -32,7 +32,7 @@ Not everyone enjoys coding as much as we do, **so do not worry if you find yours
 
 Each notebook will begin with a list of learning outcomes for that section followed by the content containing some worked examples. At the end of each section, there will be some exercises for you to complete to check your understanding of the chapter (remember to ask the ATs for help if you're stuck, they will **likely** have made all the same mistakes).
 
-Start by reading through [the setup](https://github.com/WillJRoper/uos-python-y1/blob/main/Notebooks/0_getting_setup.ipynb) and go from there.
+Read the below about getting the notebooks but then start by reading through [the setup](https://github.com/WillJRoper/uos-python-y1/blob/main/Notebooks/0_getting_setup.ipynb) and go from there.
 
 ### Getting your own copy of the Notebooks
 
