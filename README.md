@@ -32,7 +32,11 @@ Not everyone enjoys coding as much as we do, **so do not worry if you find yours
 
 Each notebook will begin with a list of learning outcomes for that section followed by the content containing some worked examples. At the end of each section, there will be some exercises for you to complete to check your understanding of the chapter (remember to ask the ATs for help if you're stuck, they will **likely** have made all the same mistakes).
 
+Start by reading through [the setup](https://github.com/WillJRoper/uos-python-y1/blob/main/Notebooks/0_getting_setup.ipynb) and go from there.
+
 ### Getting your own copy of the Notebooks
+
+You can try and follow the instructions below to get the notebooks for this module but you don't have to. A copy of this repo is available on Canvas with up-to-date documents on The Python Notebooks tab. I will go into detail about Git in due course.
 
 To get your copy of the notebooks to work on and edit as much as you like:
 - Open a terminal. (On Mac this is called Terminal. On Windows the default is Powershell).
@@ -45,7 +49,7 @@ You should now be able to see all the files that make up this course on your own
 
 If you need to update your personal copy you simply run `git pull` in the directory. This will get all the updates. If you have edited the files you will first have to run `git add .` to add everything you've changed and then `git commit -m "my local changes"` to "commit" them. Don't worry, this won't do anything nasty to the online version. You just need to do this before you can run `git pull` if you've changed the files.
 
-Of course, I suspect all of the above is a very new concept to many, if not all, of you! Don't worry if you couldn't do the above. A copy of this repo is available on Canvas with up-to-date documents. I will go into detail about Git in due course.
+Of course, I suspect all of the above is a very new concept to many, if not all, of you! Don't worry if you couldn't do the above. We'll cover it later. For now use the zip file.
 
 ## Assignments
 The three assignments (the first of which is unweighted and peer-marked) will be marked on:
