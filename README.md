@@ -67,7 +67,7 @@ This module uses `Python` 3, specifically I recommend >3.10 but >3.6 is sufficie
 ## Interacting with the content
 
 Once you have followed the setup instructions you can move on to notebooks $>1$. To do so:
-- Open a Jupyter Notebook on your computer via the Anaconda launcher.
+- Open a Jupyter Notebook on your computer via the Anaconda launcher (as shown in [the setup](https://github.com/WillJRoper/uos-python-y1/blob/main/Notebooks/0_getting_setup.ipynb)).
 - Navigate to where your notebooks are in the Jupyter Notebook. You should probably have moved them out of the Downloads!
 - Open notebook 1 and continue on from there.
 
