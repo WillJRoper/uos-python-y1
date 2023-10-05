@@ -24,19 +24,19 @@ portfolio mark, worth 30% of the PIP module mark.
 We will repeat this again and again: do not take the low weighting of this sub-module as a reflection of its importance, `Python` is an essential skill. Failure to engage now **will** lead to troubles down the road when the weightings are far higher and contributory. We have seen it before and, sadly, will undoubtedly see it again when a student hits a `Python` related problem in a later module which was discussed during this module. 
 
 ## "Lab book"
-You will find the entirety of this course housed in this repo (or uploaded to Canvas where any updates to the content will be uploaded when necessary). Each Notebook is numbered, unsurprisingly you should do these in order starting at 1 and continuing from there. 1_getting_setup.py is included as both a notebook and a pdf. **First open the pdf version or Notebooks/1_getting_setup.ipynb on GitHub. This notebook will tell you how to open notebooks for yourself!**.
+You will find the entirety of this course housed in this repo (or uploaded to Canvas where any updates to the content will be uploaded when necessary). Each Notebook is numbered, unsurprisingly you should do these in order starting at 0 and continuing from there. 
 
-You can take this module at your own pace, at the end there are bonus advanced concepts for those who progress fast and have an interest in going beyond the scope of the course. However, you should aim to keep to the general signposts within the worksheets. The earlier weeks will have multiple worksheets to do per session that cover the basics but as we delve into more complex features this will drop to a single notebook per session. 
+You can take this module at your own pace, at the end there are bonus advanced concepts for those who progress fast and have an interest in going beyond the scope of the course. However, you should aim to keep to the general signposts. The earlier weeks will have multiple notebooks to do per session that cover the basics but as we delve into more complex features this will drop to a single notebook per session. 
 
 Not everyone enjoys coding as much as we do, **so do not worry if you find yourself struggling a little**, please make sure to ask the lecturers or AT for help if you need it. Programming can be daunting for the uninitiated and it can take time to start thinking like a programmer, but when you do your increased understanding of logic will help you throughout your whole degree/life.
 
 Each notebook will begin with a list of learning outcomes for that section followed by the content containing some worked examples. At the end of each section, there will be some exercises for you to complete to check your understanding of the chapter (remember to ask the ATs for help if you're stuck, they will **likely** have made all the same mistakes).
 
-Read the below about getting the notebooks but then start by reading through [the setup](https://github.com/WillJRoper/uos-python-y1/blob/main/Notebooks/0_getting_setup.ipynb) and go from there.
+**Read the sections below and then start at [the setup](https://github.com/WillJRoper/uos-python-y1/blob/main/Notebooks/0_getting_setup.ipynb) on GitHub. This notebook will tell you how to open notebooks for yourself either on the University system or your own machine!** Then go from there.
 
 ### Getting your own copy of the Notebooks
 
-You can try and follow the instructions below to get the notebooks for this module but you don't have to. A copy of this repo is available on Canvas with up-to-date documents on The Python Notebooks tab. I will go into detail about Git in due course.
+You can try and follow the instructions below to get the notebooks for this module but you don't have to. A copy of the notebooks is available on Canvas on The Python Notebooks tab. I will go into detail about Git in due course.
 
 To get your copy of the notebooks to work on and edit as much as you like:
 - Open a terminal. (On Mac this is called Terminal. On Windows the default is Powershell).
@@ -49,7 +49,7 @@ You should now be able to see all the files that make up this course on your own
 
 If you need to update your personal copy you simply run `git pull` in the directory. This will get all the updates. If you have edited the files you will first have to run `git add .` to add everything you've changed and then `git commit -m "my local changes"` to "commit" them. Don't worry, this won't do anything nasty to the online version. You just need to do this before you can run `git pull` if you've changed the files.
 
-Of course, I suspect all of the above is a very new concept to many, if not all, of you! Don't worry if you couldn't do the above. We'll cover it later. For now use the zip file.
+Of course, I suspect all of the above is a very new concept to many, if not all, of you! Don't worry if you couldn't do the above. We'll cover it later. For now, use the zip file.
 
 ## Assignments
 The three assignments (the first of which is unweighted and peer-marked) will be marked on:
@@ -63,3 +63,12 @@ The assignments will be uploaded to Canvas and should be submitted by the deadli
 ## Python versions
 
 This module uses `Python` 3, specifically I recommend >3.10 but >3.6 is sufficient. This is the newest version of `Python` (replacing `Python` 2) and the version that's installed on the University system. You may come across instances of `Python-2` throughout your degree (and beyond) since it is still used but official support has now ended (and thus its use should also have ended... but there are holdouts). There is little difference between the two versions on the surface, so don't worry about this too much. The main differences are the syntax of the \texttt{print} function and how the code behaves when dividing one integer by another.
+
+## Interacting with the content
+
+Once you have followed the setup instructions you can move on to notebooks $>1$. To do so:
+- Open a Jupyter Notebook on your computer via the Anaconda launcher.
+- Navigate to where your notebooks are in the Jupyter Notebook. You should probably have moved them out of the Downloads!
+- Open notebook 1 and continue on from there.
+
+You can also read the notebooks on GitHub and work on code in a separate Notebook but this will take you longer and is not the advised way to interact with the module.
